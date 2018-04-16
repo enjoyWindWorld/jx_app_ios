@@ -1,0 +1,100 @@
+//
+//  JXPartnerHeader.pch
+//  JXPartner
+//
+//  Created by windpc on 2017/8/10.
+//  Copyright © 2017年 windpc. All rights reserved.
+//
+
+#ifndef JXPartnerHeader_pch
+#define JXPartnerHeader_pch
+
+
+#if (defined(DEBUG))
+#define NSLog(format, ...)  printf("\nclass: <%s:(%d) > method: %s \n%s\n", [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __PRETTY_FUNCTION__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String] )
+#else
+
+#define NSLog(format, ...)
+
+#endif
+
+
+//服务器环境配置
+#if !defined SmartPurifierHostURL_For_Develop && !defined SmartPurifierHostURL_For_BetaTest && !defined SmartPurifierHostURL_For_Release
+
+#define SmartPurifierHostURL_For_Develop   //开发
+
+//#define SmartPurifierHostURL_For_BetaTest   //内测分发
+
+//#define SmartPurifierHostURL_For_Release    //线上 appleStorezvs
+
+#endif
+
+#import <UIKit/UIKit.h>
+
+#ifdef SmartPurifierHostURL_For_Release
+
+static NSString * const SmartPurifierHostURL  = @"http://www.szjxzn.tech";
+
+#define HOST_PORT @"7686"
+
+#else
+
+#ifdef SmartPurifierHostURL_For_Develop
+
+static NSString * const SmartPurifierHostURL  = @"http://192.168.1.45";
+
+#define HOST_PORT @"8080"
+
+#elif defined SmartPurifierHostURL_For_BetaTest
+
+static NSString * const SmartPurifierHostURL = @"http://192.168.1.45";
+
+#define HOST_PORT @"8080"
+
+
+#endif
+#endif
+//jx_smart
+//8080
+#define HOST_DIRURL @"jx_partner"
+
+
+#define JXCashRuleURL @"http://www.szjxzn.tech:8080/jx/pdf/cashrule.pdf"
+
+#define SCREEN_WIDTH        ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT       ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define IS_IPHONE_4_OR_LESS (SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (SCREEN_MAX_LENGTH == 736.0)
+
+#define FETCHCURRENTVERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define FETCHOLDVERSIONKEY   @"JXFETCHOLDVERSION"
+
+#define HEXCOLORS(COLOR) [UIColor colorWithHexString:COLOR];
+#define SPPRODUCTICOPLACEHOLDERImage @"productplaceholderImage"
+
+
+
+
+#import "UIColor+HexColor.h"
+#import "UIView+Frame.h"
+#import "UITableView+FDTemplateLayoutCell.h"
+#import <UIScrollView+EmptyDataSet.h>
+#import "UIScrollView+RefreshView.h"
+#import "UIScrollView+EmptyView.h"
+#import "UIViewController+HUD.h"
+#import "JXPartnerEnumHeader.h"
+#import "UIImageView+PartWeb.h"
+#import "JXPartnerModulesMacro.h"
+
+
+
+
+
+
+
+#endif /* JXPartnerHeader_pch */

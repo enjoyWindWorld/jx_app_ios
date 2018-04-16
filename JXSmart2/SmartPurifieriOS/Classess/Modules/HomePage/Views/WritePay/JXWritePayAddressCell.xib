@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="66" id="KGk-i7-Jjw" customClass="JXWritePayAddressCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="writepayAddress" translatesAutoresizingMaskIntoConstraints="NO" id="0de-Uh-u7F">
+                        <rect key="frame" x="15" y="25" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="E9g-Fk-uYG"/>
+                            <constraint firstAttribute="height" constant="16" id="Ou4-Ye-bgU"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrdd_xfb" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-l5-SYY">
+                        <rect key="frame" x="0.0" y="61.5" width="320" height="4"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="4" id="NOE-B5-Is8"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择家庭地址" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6M-j9-Lq8">
+                        <rect key="frame" x="35" y="5" width="267" height="55.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.69803921568627447" green="0.72156862745098038" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="9ke-3m-TxT">
+                        <rect key="frame" x="304" y="27.5" width="6" height="11"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Vn4-l5-SYY" secondAttribute="bottom" id="2k7-Ln-ZPE"/>
+                    <constraint firstAttribute="bottom" secondItem="k6M-j9-Lq8" secondAttribute="bottom" constant="5" id="4bZ-V9-fXH"/>
+                    <constraint firstAttribute="trailing" secondItem="9ke-3m-TxT" secondAttribute="trailing" constant="10" id="DsB-bB-T0a"/>
+                    <constraint firstItem="k6M-j9-Lq8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="JVx-ug-fGy"/>
+                    <constraint firstItem="9ke-3m-TxT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="O45-gJ-azY"/>
+                    <constraint firstItem="Vn4-l5-SYY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SbZ-WK-Uzo"/>
+                    <constraint firstAttribute="trailing" secondItem="k6M-j9-Lq8" secondAttribute="trailing" constant="18" id="WGn-i4-JWI"/>
+                    <constraint firstItem="0de-Uh-u7F" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Xxj-us-dte"/>
+                    <constraint firstItem="k6M-j9-Lq8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="ZAj-Ny-QgU"/>
+                    <constraint firstItem="0de-Uh-u7F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="hYQ-r6-lXp"/>
+                    <constraint firstAttribute="trailing" secondItem="Vn4-l5-SYY" secondAttribute="trailing" id="vGw-8h-UlZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addressLabel" destination="k6M-j9-Lq8" id="T1L-kf-ZYD"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="65"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="left" width="6" height="11"/>
+        <image name="qrdd_xfb" width="359" height="6"/>
+        <image name="writepayAddress" width="16" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,132 @@
+//
+//  SPPrefixHeader.pch
+//  SmartPurifieriOS
+//
+//  Created by Wind on 2016/11/15.
+//  Copyright © 2016年 SmartPurifieriOS. All rights reserved.
+//
+
+
+#ifndef SPPrefixHeader_pch
+#define SPPrefixHeader_pch
+
+
+#if (defined(DEBUG))
+#define NSLog(format, ...)  printf("\nclass: <%s:(%d) > method: %s \n%s\n", [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __PRETTY_FUNCTION__, [[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String] )
+#else
+
+#define NSLog(format, ...)
+
+#endif
+
+//服务器环境配置
+#if !defined SmartPurifierHostURL_For_Develop && !defined SmartPurifierHostURL_For_BetaTest && !defined SmartPurifierHostURL_For_Release
+
+//#define SmartPurifierHostURL_For_Develop   //开发
+
+#define SmartPurifierHostURL_For_BetaTest   //内测分发
+//
+//#define SmartPurifierHostURL_For_Release    //线上 appleStorezvs
+
+#endif
+
+#import <UIKit/UIKit.h>
+
+#ifdef SmartPurifierHostURL_For_Release
+
+static NSString * const SmartPurifierHostURL  = @"http://www.szjxzn.tech:8080//jx_smart";
+//static NSString * const SmartPurifierHostURL = @"http://www.jx-inteligent.tech:8877/jx_smart";
+
+
+#else
+
+#ifdef SmartPurifierHostURL_For_Develop
+
+
+static NSString * const SmartPurifierHostURL  = @"http://www.szjxzn.tech:8080/jx_smart";
+
+#elif defined SmartPurifierHostURL_For_BetaTest
+
+static NSString * const SmartPurifierHostURL = @"http://192.168.1.46:8080/jx_smart";
+
+
+#endif
+#endif
+
+#define HOST_DIRURL @"jx_smart"
+#define HOST_POST @"8080"
+
+
+#define SCREEN_WIDTH        ([[UIScreen mainScreen] bounds].size.width)
+
+#define SCREEN_HEIGHT       ([[UIScreen mainScreen] bounds].size.height)
+
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPHONE_4_OR_LESS (SCREEN_MAX_LENGTH < 568.0)
+
+#define IS_IPHONE_5 (SCREEN_MAX_LENGTH == 568.0)
+
+#define IS_IPHONE_6 (SCREEN_MAX_LENGTH == 667.0)
+
+#define IS_IPHONE_6P (SCREEN_MAX_LENGTH == 736.0)
+
+//App显示的区域
+#define MAINSCREEN   [UIScreen mainScreen].applicationFrame
+//屏幕的全部区域
+#define MAINBOUNDS   [UIScreen mainScreen].bounds
+
+
+#define NavBar_Title_Width                  SCREEN_WIDTH - 130.0f            //标题宽度
+#define NavBar_Title_Height                 40.0f             //标题高度
+
+#define NavBar_BarButton_Width              64.0f             //按钮宽度
+#define NavBar_BarButton_Height             40.0f             //按钮高度
+
+#define NavBar_BarButton_Right_Width        -6.0f
+
+#define Bottom_H                            49.0f             //底部Tabbar的高度
+#define NaviBar_H                           self.navigationController.navigationBar.frame.size.height                                                           //导航栏高度
+#define StatusBar_H                         [UIApplication sharedApplication].statusBarFrame.size.height    //状态栏的高度
+
+#import "UIColor+HexColor.h"
+#import "UIView+Frame.h"
+#import "NSDate+NSDateExtra.h"
+#import "UITableView+FDTemplateLayoutCell.h"
+#import <UIScrollView+EmptyDataSet.h>
+#import "UIScrollView+RefreshView.h"
+#import "UIScrollView+EmptyView.h"
+#import "SPCommunityHeader.h"
+#import "SPHomePageModulesHeader.h"
+#import "SPUserServiceHeader.h"
+#import "SPMainModulesHeader.h"
+#import "JXMovieHappyModulesMacro.h"
+#import "SPMJRefresh.h"
+#import "SPSDWebImage.h"
+#import "SPSVProgressHUD.h"
+#import "SPTSMessage.h"
+#import "SPToastHUD.h"
+#import "UIConstants.h"
+
+#define SPUSERHEADICOIMAGESTR @"user-ico-placehorder"
+
+#define SPElectricityPayResult @"SPElectricityPayResult"
+
+#define SPPRODUCTICOPLACEHOLDERImage @"productplaceholderImage"
+
+#define SPNavBarColor [UIColor colorWithHexString:@"1bb6ef"]
+
+#define  SPViewBackColor [UIColor colorWithHexString:@"f2f3f2"]
+
+#define HEXCOLOR(COLOR) [UIColor colorWithHexString:COLOR]
+
+//推广码生成前置
+#define INTERPROMOTION @"jxsmart://promotion://"
+
+#define FETCHCURRENTVERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+#define FETCHOLDVERSIONKEY   @"JXFETCHOLDVERSION"
+
+
+#endif /* SPPrefixHeader_pch */

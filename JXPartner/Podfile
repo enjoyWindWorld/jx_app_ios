@@ -1,0 +1,20 @@
+platform:ios,'8.0'
+target :JXPartner do
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'IQKeyboardManager'
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'Toast'
+pod 'SVProgressHUD'
+#pod 'CTAssetsPickerController'
+#pod 'MWPhotoBrowser'
+pod 'DZNEmptyDataSet'
+pod 'Bugly'
+pod 'GTSDK', '2.0.0.0-noidfa'
+end
+
+#target 'NotificationService' do
+#    platform :ios, "10.0"
+#    pod 'GTExtensionSDK'
+#end

@@ -1,0 +1,98 @@
+//
+//  JFSearchView.m
+//  JFFootball
+//
+//  Created by 张志峰 on 2016/11/24.
+//  Copyright © 2016年 zhifenx. All rights reserved.
+//
+
+#import "JFSearchView.h"
+
+static NSString *ID = @"searchCell";
+
+@interface JFSearchView ()<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *rootTableView;
+
+@end
+
+@implementation JFSearchView
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+    }
+    return self;
+}
+
+- (void)setResultMutableArray:(NSMutableArray *)resultMutableArray {
+    _resultMutableArray = resultMutableArray;
+    [self addSubview:self.rootTableView];
+    [_rootTableView reloadData];
+}
+
+- (UITableView *)rootTableView {
+    if (!_rootTableView) {
+        _rootTableView = [[UITableView alloc] initWithFrame:self.bounds style:UITableViewStylePlain];
+        [_rootTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
+        _rootTableView.delegate = self;
+        _rootTableView.dataSource = self;
+        _rootTableView.backgroundColor = [UIColor clearColor];
+    }
+    return _rootTableView;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [_resultMutableArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
+    
+    NSDictionary *dataDic = _resultMutableArray[indexPath.row];
+    
+    NSString *superCity = [dataDic valueForKey:@"super"];
+    
+    if (superCity.length > 0) {
+        //当搜索是城市和区共有的时候
+       cell.textLabel.text = [NSString stringWithFormat:@"%@，%@",[dataDic valueForKey:@"super"],[dataDic valueForKey:@"city"]];
+    }else{
+        //当只搜到城市的时候
+        cell.textLabel.text = [dataDic valueForKey:@"city"];
+    }
+    
+    cell.backgroundColor = [UIColor clearColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *dataDic = _resultMutableArray[indexPath.row];
+    if (![[dataDic valueForKey:@"city"] isEqualToString:@"抱歉"]) {
+        if (self.resultBlock) {
+            self.resultBlock(dataDic);
+        }
+    }
+}
+
+- (void)resultBlock:(JFSearchViewChoseCityReultBlock)block {
+    self.resultBlock = block;
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    //CGFloat offsetY = scrollView.contentOffset.y;
+    
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+}
+
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (self.touchViewBlock) {
+        self.touchViewBlock();
+    }
+}
+
+- (void)touchViewBlock:(JFSearchViewBlock)block {
+    self.touchViewBlock = block;
+}
+@end

@@ -1,0 +1,17 @@
+platform:ios,'8.0'
+target :SmartPurifieriOS do
+
+pod 'MJExtension'
+pod 'MJRefresh'
+pod 'IQKeyboardManager'
+pod 'AFNetworking'
+pod 'SDWebImage'
+pod 'Toast'
+pod 'SVProgressHUD'
+pod 'CTAssetsPickerController'
+pod 'MWPhotoBrowser'
+#pod 'TSMessages'
+pod 'DZNEmptyDataSet'
+#pod 'BuglyHotfix'
+pod 'Bugly'
+end
