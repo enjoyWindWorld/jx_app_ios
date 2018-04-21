@@ -15,7 +15,7 @@
 
 @property (nonatomic,copy) NSString * price ;
 
-@property (nonatomic,copy) NSString * pay_pledge ; //押金
+@property (nonatomic,copy) NSString * pay_pledge ; //履约金
 
 @property (nonatomic,assign) BOOL isSelect ;
 

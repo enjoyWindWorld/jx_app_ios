@@ -24,9 +24,9 @@
 
 //#define SmartPurifierHostURL_For_Develop   //开发
 
-#define SmartPurifierHostURL_For_BetaTest   //内测分发
+//#define SmartPurifierHostURL_For_BetaTest   //内测分发
 //
-//#define SmartPurifierHostURL_For_Release    //线上 appleStorezvs
+#define SmartPurifierHostURL_For_Release    //线上 appleStorezvs
 
 #endif
 

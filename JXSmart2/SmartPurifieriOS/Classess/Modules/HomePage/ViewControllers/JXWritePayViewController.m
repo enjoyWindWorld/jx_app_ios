@@ -280,7 +280,7 @@
         
         NSString * allcount = [NSString stringWithFormat:@"%ld",[self fetchAllProductList]];
         
-        NSString * valuestr = indexPath.item==self.productListArr.count?[NSString stringWithFormat:@"共包含押金:%@元",allple]:[NSString stringWithFormat:@"共%@台设备",allcount];
+        NSString * valuestr = indexPath.item==self.productListArr.count?[NSString stringWithFormat:@"共包含履约金:%@元",allple]:[NSString stringWithFormat:@"共%@台设备",allcount];
         
         NSMutableAttributedString * attstr = [[NSMutableAttributedString alloc] initWithString:valuestr];
         
