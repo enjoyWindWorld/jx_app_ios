@@ -23,6 +23,7 @@
 @property (nonatomic,copy) NSString * safetyMark ;  //标示
 
 @property (nonatomic,assign) NSTimeInterval timeout;
+@property (nonatomic,assign) NSInteger operatorInter ;
 
 
 -(BOOL)saveCurrentPartnerModel;

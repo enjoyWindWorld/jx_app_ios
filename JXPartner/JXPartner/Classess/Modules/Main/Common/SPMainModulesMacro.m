@@ -14,7 +14,7 @@
 NSString * const registerSendSMSCodeURL  = @"smvc/partner/registerCode.v";
 
 /**  用户注册 */
- NSString * const userRegisterURL = @"smvc/user/test/register.v";
+ NSString * const userRegisterURL = @"smvc/partner/registereds.v";
 
 /**  用户登录 */
  NSString * const userLoginURL = @"smvc/partner/toLogin.v";

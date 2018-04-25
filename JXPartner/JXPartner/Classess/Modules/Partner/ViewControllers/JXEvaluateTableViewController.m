@@ -32,14 +32,14 @@
         [self performSegueWithIdentifier:@"JXPlanFilterLifeViewController" sender:nil];
     }
 
+//    if (indexPath.section == 1) {
+//
+//        CustomAfterSalesViewController * vc = [[CustomAfterSalesViewController alloc] init];
+//
+//        [self.navigationController pushViewController:vc animated:YES];
+//    }
+
     if (indexPath.section == 1) {
-
-        CustomAfterSalesViewController * vc = [[CustomAfterSalesViewController alloc] init];
-
-        [self.navigationController pushViewController:vc animated:YES];
-    }
-
-    if (indexPath.section == 2) {
 
         [self performSegueWithIdentifier:@"JXFilterWarningViewController" sender:nil];
     }

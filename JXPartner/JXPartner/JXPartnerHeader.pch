@@ -36,15 +36,15 @@
 
 static NSString * const SmartPurifierHostURL  = @"http://www.szjxzn.tech";
 
-#define HOST_PORT @"7686"
+#define HOST_PORT @":7686"
 
 #else
 
 #ifdef SmartPurifierHostURL_For_Develop
 
-static NSString * const SmartPurifierHostURL  = @"http://192.168.1.45";
+static NSString * const SmartPurifierHostURL  = @"http://120.79.63.162:80";
 
-#define HOST_PORT @"8080"
+#define HOST_PORT @""
 
 #elif defined SmartPurifierHostURL_For_BetaTest
 
@@ -61,6 +61,8 @@ static NSString * const SmartPurifierHostURL = @"http://192.168.1.45";
 
 
 #define JXCashRuleURL @"http://www.szjxzn.tech:8080/jx/pdf/cashrule.pdf"
+//注册协议
+#define JXREGVALUE  @"http://www.szjxzn.tech:8080/jx/pdf/partneragreement.pdf"
 
 #define SCREEN_WIDTH        ([[UIScreen mainScreen] bounds].size.width)
 #define SCREEN_HEIGHT       ([[UIScreen mainScreen] bounds].size.height)
@@ -76,6 +78,13 @@ static NSString * const SmartPurifierHostURL = @"http://192.168.1.45";
 
 #define HEXCOLORS(COLOR) [UIColor colorWithHexString:COLOR];
 #define SPPRODUCTICOPLACEHOLDERImage @"productplaceholderImage"
+
+//公司的账号
+#define AppkeyWithUmSocial   @"5ae0b42aa40fa370d5000324"
+
+#define AppkeyWithWeChat   @"wxf6f67388d7d2d513"
+
+#define AppSecretWithWeChat   @"28d530bda8c90ba6ae246b6d38402b7a"
 
 
 

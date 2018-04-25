@@ -68,6 +68,29 @@
     
 }
 
+//注册
+-(void)requestUserRegister:(NSDictionary * )params
+                   success:(BusinessSuccessBlock)successBlock
+                    failer:(BusinessFailureBlock)failer{
+    
+    [SPBaseNetWorkRequst startNetRequestWithTypeMethod:RequestMethod_POST isNeedUserIdentifier:NO didParam:params didUrl:userRegisterURL didSuccess:^(id response) {
+        if (successBlock) {
+            
+            successBlock (response);
+        }
+        
+    } didFailed:^(NSString *errorMsg) {
+        
+        if (failer) {
+            
+            failer (errorMsg);
+        }
+    }];
+    
+    
+}
+
+
 /**
  用户登录
  

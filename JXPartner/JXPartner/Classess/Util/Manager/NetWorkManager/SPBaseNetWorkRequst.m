@@ -408,7 +408,7 @@
 
     if (!_engine) {
         
-        _engine = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@:%@/%@",SmartPurifierHostURL,HOST_PORT,HOST_DIRURL]]];
+        _engine = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@/%@",SmartPurifierHostURL,HOST_PORT,HOST_DIRURL]]];
         
         [_engine setSecurityPolicy:[FactorySecurityPolicy customSecurityPolicy]];
         

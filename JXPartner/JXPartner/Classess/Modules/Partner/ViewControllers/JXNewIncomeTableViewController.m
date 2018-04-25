@@ -108,10 +108,10 @@
     
     NSArray *  item2 = @[@{SECTIONDATA_LEFT:@"是否按照合同",SECTIONDATA_RIGHT:[NSString stringWithFormat:@"%@",_model.ispact == YES?@"是":@"否"]},
                         @{SECTIONDATA_LEFT:@"返利比例",SECTIONDATA_RIGHT:[NSString stringWithFormat:@"%.2f",_model.wdl_fee]},
-                          @{SECTIONDATA_LEFT:@"安装费比例",SECTIONDATA_RIGHT:[NSString stringWithFormat:@"%.2f",_model.rwl_install]},
+                          @{SECTIONDATA_LEFT:@"市场推广比例",SECTIONDATA_RIGHT:[NSString stringWithFormat:@"%.2f",_model.rwl_install]},
                         @{SECTIONDATA_LEFT:@"服务费返利",SECTIONDATA_RIGHT:[NSString stringWithFormat:@"%.2f元",_model.service_fee]},
                          @{SECTIONDATA_LEFT:@"服务费续费返利",SECTIONDATA_RIGHT:[NSString stringWithFormat:@"%.2f元",_model.renewal]},
-                         @{SECTIONDATA_LEFT:@"安装费补贴",SECTIONDATA_RIGHT:[NSString stringWithFormat:@"%.2f元",_model.installation]},
+                         @{SECTIONDATA_LEFT:@"市场推广补贴",SECTIONDATA_RIGHT:[NSString stringWithFormat:@"%.2f元",_model.installation]},
                          @{SECTIONDATA_LEFT:@"下级返利",SECTIONDATA_RIGHT:[NSString stringWithFormat:@"合计:%.2f元",_model.lower_rebate]}];
     
     NSDictionary * dic2 = @{SECTIONTITLE:@"提现项",SECTIONDATA:item2};

@@ -12,6 +12,10 @@
 
 @implementation SPUserModel
 
++(NSDictionary *)mj_replacedKeyFromPropertyName{
+    
+    return @{@"operatorInter":@"operator"};
+}
 
 -(BOOL)saveCurrentPartnerModel{
 

@@ -44,7 +44,7 @@
 
 
 //提现money
- NSString * const URL_FetchTiXianMoney = @"smvc/partner/withdrawalamount.v";
+ NSString * const URL_FetchTiXianMoney = @"smvc/partner/withdrawalamountnew.v";
 //提现记录
  NSString * const URL_FetchTiXianHistory = @"smvc/partner/withdrawalrecord.v";
 //提现发起
@@ -89,24 +89,11 @@ NSString * const URL_FetchSubTiXianDetail = @"smvc/partner/lowerdetails.v";
             
         case JXPartnerLevel_Province:
             
-            string = @"省级";
+            string = @"运营商";
             break ;
-            
-        case JXPartnerLevel_City:
-            
-            string = @"市级";
-            break ;
-            
-        case JXPartnerLevel_Area:
-            
-            string = @"区级";
-            break ;
-            
-        case JXPartnerLevel_County:
-            string = @"产品经理";
-            break ;
-            
+        
         default:
+            string = @"创客";
             break;
     }
     

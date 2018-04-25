@@ -66,6 +66,11 @@
          success:(BusinessSuccessBlock)successBlock
           failer:(BusinessFailureBlock)failer;
 
+//注册
+-(void)requestUserRegister:(NSDictionary * )params
+                   success:(BusinessSuccessBlock)successBlock
+                    failer:(BusinessFailureBlock)failer;
+
 
 /**
  上传图片数据

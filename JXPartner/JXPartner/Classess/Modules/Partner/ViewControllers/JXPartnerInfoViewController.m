@@ -17,6 +17,7 @@
 
 #define ITEMTEXTKEY @"ITEMTEXTKEY"
 #define ITEMIMAGEKEY @"ITEMIMAGEKEY"
+#define NormarOperater -1
 
 @interface JXPartnerInfoViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UINavigationControllerDelegate>
 
@@ -53,6 +54,21 @@
     if ([[NSDate date] timeIntervalSince1970] - model.timeout > 60) {
         
         [self  requestPartnerInfoation];
+    }else{
+        if (model.operatorInter == NormarOperater) {
+            UIAlertController * ale = [UIAlertController alertControllerWithTitle:@"提示" message:@"你已经达到升级运营商的条件了!" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction * act = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            
+            UIAlertAction * act2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+            
+            [ale addAction:act];
+            [ale addAction:act2];
+            
+            [self presentViewController:ale animated:YES completion:nil];
+        }
     }
     
     self.partnerInfoTableView.layer.cornerRadius = 5.f;
@@ -67,7 +83,7 @@
     _collectionDataSource = @[
                               @{ITEMTEXTKEY:@"订单管理",ITEMIMAGEKEY:@"ordermanager"},
                               @{ITEMTEXTKEY:@"我的收入",ITEMIMAGEKEY:@"mymoney"},
-                              @{ITEMTEXTKEY:@"我的下属",ITEMIMAGEKEY:@"subparnter"},
+                              @{ITEMTEXTKEY:@"我的e家",ITEMIMAGEKEY:@"subparnter"},
                               @{ITEMTEXTKEY:@"售后管理",ITEMIMAGEKEY:@"subparnter"},
                               @{ITEMTEXTKEY:@"我的消息",ITEMIMAGEKEY:@"mymessage"},
                               @{ITEMTEXTKEY:@"设置",ITEMIMAGEKEY:@"setting"}];
@@ -136,6 +152,24 @@
             
             NSLog(@"支付宝没有绑定");
              [UIViewController showWithStatus:@"支付宝当前没有绑定,建议及时绑定！" dismissAfter:10 styleName:STATETYPE_FAILERE];
+        }
+//        达到
+        if (model.operatorInter == NormarOperater) {
+            UIAlertController * ale = [UIAlertController alertControllerWithTitle:@"提示" message:@"你已经达到升级运营商的条件了!" preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction * act = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+            
+            UIAlertAction * act2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+            
+            [ale addAction:act];
+            [ale addAction:act2];
+            
+            
+            [self presentViewController:ale animated:YES completion:nil];
+            
+            
         }
 
         

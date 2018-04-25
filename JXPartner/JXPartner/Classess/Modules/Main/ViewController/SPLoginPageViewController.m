@@ -96,7 +96,7 @@
     
     if (_phoneText.text.length==0) {
         
-        [self makeToast:@"请输入合伙人编号"];
+        [self makeToast:@"请输入创客代码"];
         
         return ;
     }

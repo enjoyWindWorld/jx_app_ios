@@ -14,17 +14,23 @@
 #import "JXNewIncomeTableViewController.h"
 #import "RxWebViewController.h"
 
-#define  TOTAL_MONEY_KEY @"withdrawal_total_amount"
 #define  DRAWAL_ORDERNO_KEY @"withdrawalOrderNo"
-
+#define  my_balance @"my_balance"   //我的余额
+#define  myTotalIncome @"myTotalIncome"  //我的总收入
+#define  myWithdrawalLimit @"myWithdrawalLimit"  //可提现额度
 
 @interface JXIncomeViewController ()
 
 
 
-@property (weak, nonatomic) IBOutlet UILabel *incomeMoneyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *incomeMoneyLabel;//我的总收入
 
 @property (weak, nonatomic) IBOutlet UILabel *aliBindState;
+
+@property (weak, nonatomic) IBOutlet UILabel *my_balanceLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *myIncomeLimitlabel;
+
 
 @property (nonatomic,strong) JXPartnerBusiness * business ;
 
@@ -117,11 +123,16 @@
             
             NSDictionary * dic = result ;
             
-            CGFloat money  = [dic[TOTAL_MONEY_KEY] floatValue];
+            CGFloat money  = [dic[myTotalIncome] floatValue];
                         
             weakself.orderNO = money == 0 ? nil : dic[DRAWAL_ORDERNO_KEY];
-            
             weakself.incomeMoneyLabel.text = [NSString stringWithFormat:@"￥%.2f元",money];
+            
+            money  = [dic[my_balance] floatValue];
+            weakself.my_balanceLabel.text = [NSString stringWithFormat:@"￥%.2f元",money];
+           
+            money  = [dic[myWithdrawalLimit] floatValue];
+            weakself.myIncomeLimitlabel.text = [NSString stringWithFormat:@"￥%.2f元",money];
             
         }else{
         
