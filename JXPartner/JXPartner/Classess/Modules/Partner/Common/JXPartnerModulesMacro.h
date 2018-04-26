@@ -61,6 +61,8 @@ UIKIT_EXTERN NSString * const URL_FetchSubTiXianDetail;
 /** 上级审核下级体现单 */
 UIKIT_EXTERN NSString * const URL_UpdateSubTiXianState;
 
+UIKIT_EXTERN NSString * const HomePageNewsList ;
+
 
 +(NSString*)fetchParnerLevelString:(NSInteger)level;
 

@@ -21,6 +21,9 @@
 #import <UserNotifications/UserNotifications.h>
 #endif
 
+#import <UMSocialCore/UMSocialCore.h>
+
+
 static const CGFloat kDefaultPlaySoundInterval = 5.0;
 
 @interface AppDelegate ()
@@ -40,6 +43,9 @@ static const CGFloat kDefaultPlaySoundInterval = 5.0;
     [[NSUserDefaults standardUserDefaults] initWithSuiteName:@"com.jingxismart.jxpartner"];
     
     application.applicationIconBadgeNumber = 0 ;
+    
+    [self UmengShake];
+
     
     [self  keyboardApplication];
     
@@ -281,6 +287,61 @@ static const CGFloat kDefaultPlaySoundInterval = 5.0;
     // [ GTSdk ]：向个推服务器注册deviceToken
     [GeTuiSdk registerDeviceToken:token];
 }
+
+-(void)UmengShake{
+    
+    //打开调试日志
+    [[UMSocialManager defaultManager] openLog:YES];
+    
+    //设置友盟appkey
+    [[UMSocialManager defaultManager] setUmSocialAppkey:AppkeyWithUmSocial];
+    
+    // 获取友盟social版本号
+    
+    //设置微信的appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:AppkeyWithWeChat appSecret:AppSecretWithWeChat redirectURL:@"http://www.szjxzn.cn/index.php"];
+    
+    
+    [[UMSocialManager defaultManager] removePlatformProviderWithPlatformTypes:@[@(UMSocialPlatformType_WechatFavorite)]];
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    
+    return [self jx_pay_callBackNotification:url];
+}
+
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    return [self jx_pay_callBackNotification:url];
+    
+}
+
+// NOTE: 9.0以后使用新API接口
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
+{
+    
+    return [self jx_pay_callBackNotification:url];
+    
+}
+
+-(BOOL) jx_pay_callBackNotification:(NSURL*)url {
+    
+    NSLog(@"host %@",url.host);
+    
+    
+        BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
+        
+        return result;
+    
+    
+    
+}
+
 
 /** 远程通知注册失败委托 */
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {

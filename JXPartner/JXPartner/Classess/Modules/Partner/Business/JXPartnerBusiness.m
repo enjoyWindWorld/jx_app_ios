@@ -19,6 +19,7 @@
 #import "JXAfterListModel.h"
 #import "JXNewAfterSalesModel.h"
 #import "JXEvaluateModel.h"
+#import "JXNewsModel.h"
 
 @implementation JXPartnerBusiness
 
@@ -63,6 +64,35 @@
     }];
 
 }
+
+-(void)fetchHomePageNewsList:(NSDictionary*)param
+                    succcess:(BusinessSuccessBlock)success
+                     failere:(BusinessFailureBlock)failere{
+    
+    [SPBaseNetWorkRequst  startNetRequestWithTypeMethod:RequestMethod_POST isNeedUserIdentifier:NO didParam:param didUrl:HomePageNewsList didSuccess:^(id response) {
+        
+        if ([response isKindOfClass:[NSArray class]]) {
+            
+            NSArray * conentArr  = [JXNewsModel mj_objectArrayWithKeyValuesArray:response];
+            
+            if (success) {
+                
+                success(conentArr);
+            }
+        }else{
+            
+            failere(BUSINESSDATAERR);
+        }
+    } didFailed:^(id error) {
+        
+        if (failere) {
+            failere(error);
+        }
+    }];
+    
+    
+}
+
 
 /**
  获取订单列表

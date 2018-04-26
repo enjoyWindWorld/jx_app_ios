@@ -277,6 +277,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPd-MY-Gbw">
+                                <rect key="frame" x="10" y="385" width="355" height="38"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horn" translatesAutoresizingMaskIntoConstraints="NO" id="2uf-Je-THn">
+                                        <rect key="frame" x="15" y="12" width="13" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="14" id="6Jz-6j-CkZ"/>
+                                            <constraint firstAttribute="width" constant="13" id="8Ua-fT-C3A"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sn8-WM-Ws2" customClass="ADRollView">
+                                        <rect key="frame" x="33" y="0.0" width="317" height="38"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Sn8-WM-Ws2" firstAttribute="top" secondItem="EPd-MY-Gbw" secondAttribute="top" id="1Tj-d0-PP0"/>
+                                    <constraint firstItem="2uf-Je-THn" firstAttribute="centerY" secondItem="EPd-MY-Gbw" secondAttribute="centerY" id="5ZV-5J-bac"/>
+                                    <constraint firstItem="2uf-Je-THn" firstAttribute="leading" secondItem="EPd-MY-Gbw" secondAttribute="leading" constant="15" id="8T9-Ec-OrH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sn8-WM-Ws2" secondAttribute="trailing" constant="5" id="Jee-5K-B1J"/>
+                                    <constraint firstAttribute="height" constant="38" id="SgR-Tc-H44"/>
+                                    <constraint firstItem="Sn8-WM-Ws2" firstAttribute="leading" secondItem="2uf-Je-THn" secondAttribute="trailing" constant="5" id="Uqj-0P-y4h"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sn8-WM-Ws2" secondAttribute="bottom" id="oAc-hi-1kX"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KdJ-9a-v6f">
                                 <rect key="frame" x="15" y="477.33333333333326" width="345" height="270.66666666666674"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -312,14 +338,17 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="EPd-MY-Gbw" firstAttribute="top" secondItem="qYp-Av-eWM" secondAttribute="bottom" constant="10" id="8lz-Mo-iHz"/>
                             <constraint firstItem="nIf-j8-MXj" firstAttribute="top" secondItem="VNJ-ow-jN5" secondAttribute="top" constant="70" id="CKm-Xi-z55"/>
                             <constraint firstItem="KdJ-9a-v6f" firstAttribute="leading" secondItem="VNJ-ow-jN5" secondAttribute="leading" constant="15" id="DiN-fb-ph6"/>
                             <constraint firstItem="qYp-Av-eWM" firstAttribute="top" secondItem="nIf-j8-MXj" secondAttribute="bottom" id="Gnc-RH-Ak3"/>
+                            <constraint firstAttribute="trailing" secondItem="EPd-MY-Gbw" secondAttribute="trailing" constant="10" id="JLv-C1-hLa"/>
                             <constraint firstItem="nIf-j8-MXj" firstAttribute="centerX" secondItem="VNJ-ow-jN5" secondAttribute="centerX" id="N4g-vV-5AV"/>
                             <constraint firstAttribute="trailing" secondItem="KdJ-9a-v6f" secondAttribute="trailing" constant="15" id="ggC-eb-rrx"/>
                             <constraint firstAttribute="trailing" secondItem="qYp-Av-eWM" secondAttribute="trailing" constant="15" id="gqg-Fn-gEH"/>
                             <constraint firstItem="tGB-6B-pj5" firstAttribute="top" secondItem="KdJ-9a-v6f" secondAttribute="bottom" constant="30" id="icE-au-iBc"/>
                             <constraint firstItem="KdJ-9a-v6f" firstAttribute="height" secondItem="VNJ-ow-jN5" secondAttribute="height" multiplier="1:3" id="o62-ax-0SR"/>
+                            <constraint firstItem="EPd-MY-Gbw" firstAttribute="leading" secondItem="VNJ-ow-jN5" secondAttribute="leading" constant="10" id="oy5-zf-o1t"/>
                             <constraint firstItem="nIf-j8-MXj" firstAttribute="height" secondItem="VNJ-ow-jN5" secondAttribute="height" multiplier="0.16" id="qB7-Mf-Agq"/>
                             <constraint firstItem="qYp-Av-eWM" firstAttribute="leading" secondItem="VNJ-ow-jN5" secondAttribute="leading" constant="15" id="sZW-Wd-pfc"/>
                         </constraints>
@@ -336,6 +365,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="YX7-ul-IvV"/>
                     <connections>
+                        <outlet property="newsContent" destination="Sn8-WM-Ws2" id="tS2-hf-ysO"/>
                         <outlet property="partnerInfoTableView" destination="qYp-Av-eWM" id="9sP-Jl-xqy"/>
                         <outlet property="partnerItemCollectionView" destination="KdJ-9a-v6f" id="rJL-d7-fub"/>
                         <segue destination="oWI-Jh-wml" kind="push" identifier="JXPartnerSettingViewController" id="2pJ-fM-1jw"/>
@@ -1824,6 +1854,7 @@
     </scenes>
     <resources>
         <image name="CheckNormal" width="20" height="20"/>
+        <image name="horn" width="13" height="14"/>
         <image name="messageUNread" width="10" height="10"/>
         <image name="messagelogo" width="50" height="50"/>
         <image name="nav_back_right_white" width="25" height="25"/>

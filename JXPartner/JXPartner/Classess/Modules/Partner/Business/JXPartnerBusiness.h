@@ -34,6 +34,9 @@
                      success:(BusinessSuccessBlock)successBlock
                       failer:(BusinessFailureBlock)failer;
 
+-(void)fetchHomePageNewsList:(NSDictionary*)param
+                    succcess:(BusinessSuccessBlock)success
+                     failere:(BusinessFailureBlock)failere;
 
 /**
  获取订单详情

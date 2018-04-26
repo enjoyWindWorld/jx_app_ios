@@ -7,6 +7,9 @@
 //
 
 #import "SPBaseViewController.h"
+#import "SPBaseModel.h"
+
+
 
 @interface JXPartnerInfoViewController : SPBaseViewController
 

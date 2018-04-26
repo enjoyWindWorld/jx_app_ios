@@ -10,7 +10,7 @@
 #import "SPMainLoginBusiness.h"
 #import "SPResetPasswordViewController.h"
 #import "UIButton+TimerClass.h"
-@interface SPRegisiterViewController ()
+@interface SPRegisiterViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,strong) SPMainLoginBusiness * buessiness;
 
@@ -25,11 +25,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setNavBarTitle:@"注册"];
-
-    [self setNavBarLeftBtn:[STNavBarView createImgNaviBarBtnByImgNormal:@"nav_back" imgHighlight:@"nav_back_highlighted" target:self action:@selector(viewGoPop)]];
+//    [self setNavBarTitle:@"注册"];
+//
+//    [self setNavBarLeftBtn:[STNavBarView createImgNaviBarBtnByImgNormal:@"nav_back" imgHighlight:@"nav_back_highlighted" target:self action:@selector(viewGoPop)]];
     
     [self.regisButton addTarget:self action:@selector(requestRegisiter:) forControlEvents:UIControlEventTouchUpInside];
+    
+//    [self.tableView setContentInset:UIEdgeInsetsMake(50, 0, 0, 0)];
     
     // Do any additional setup after loading the view.
 }

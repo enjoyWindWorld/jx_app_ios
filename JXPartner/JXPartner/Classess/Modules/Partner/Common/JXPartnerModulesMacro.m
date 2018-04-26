@@ -64,6 +64,9 @@ NSString * const URL_FetchSubTiXianDetail = @"smvc/partner/lowerdetails.v";
 /** 上级审核下级体现单 */
  NSString * const URL_UpdateSubTiXianState = @"smvc/partner/withdrawalaudit.v";
 
+NSString * const HomePageNewsList = @"smvc/news/information.v";
+
+
 
 +(NSString*)fetchParnerLevelString:(NSInteger)level{
 

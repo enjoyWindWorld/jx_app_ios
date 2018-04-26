@@ -14,10 +14,13 @@
 #import <GTSDK/GeTuiSdk.h>
 #import "CustomJXSubPartnerView.h"
 #import "UIView+MGBadgeView.h"
+#import "ADRollView.h"
+#import "JXNewsModel.h"
 
 #define ITEMTEXTKEY @"ITEMTEXTKEY"
 #define ITEMIMAGEKEY @"ITEMIMAGEKEY"
-#define NormarOperater -1
+#define NormarOperater 1
+
 
 @interface JXPartnerInfoViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UINavigationControllerDelegate>
 
@@ -32,6 +35,10 @@
 @property (nonatomic,strong) JXPartnerBusiness * business;
 
 @property (nonatomic,strong)   JXPartnerItemCollectionViewCell * cell ;
+@property (weak, nonatomic) IBOutlet ADRollView *newsContent;
+@property (nonatomic,strong) NSArray * newsArr ;
+
+
 
 @end
 
@@ -55,16 +62,16 @@
         
         [self  requestPartnerInfoation];
     }else{
-        if (model.operatorInter == NormarOperater) {
+//        不是运营商 但符合条件
+        if ((model.operatorInter == NormarOperater) &&  model.level != 1) {
             UIAlertController * ale = [UIAlertController alertControllerWithTitle:@"提示" message:@"你已经达到升级运营商的条件了!" preferredStyle:UIAlertControllerStyleAlert];
-            
-            UIAlertAction * act = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-            
+     
+        
             UIAlertAction * act2 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 
             }];
             
-            [ale addAction:act];
+//            [ale addAction:act];
             [ale addAction:act2];
             
             [self presentViewController:ale animated:YES completion:nil];
@@ -89,10 +96,75 @@
                               @{ITEMTEXTKEY:@"设置",ITEMIMAGEKEY:@"setting"}];
     
     
-      [self  getPeopleInfoation];
+    [self  getPeopleInfoation];
+    [self requestNewsList];
+    
+    
+   
     // Do any additional setup after loading the view.
 }
 
+-(void)requestNewsList{
+    
+    __weak typeof(self) weakself = self ;
+    
+    [self.business fetchHomePageNewsList:@{@"type":@"0"} succcess:^(id result) {
+        
+        weakself.newsArr = result ;
+       
+        if ([weakself getData].count>0) {
+            
+            [weakself.newsContent  setVerticalShowDataArr:[self getData]];
+            
+            [weakself.newsContent start];
+            
+            weakself.newsContent.clickBlock = ^(NSInteger index) {
+                
+                if (weakself.newsArr.count>index) {
+                    
+                    JXNewsModel * newmodel = self.newsArr[index];
+                    
+                    //                RxWebViewController * web = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:newmodel.news_url]];
+                    //
+                    //                [self.navigationController pushViewController:web animated:YES];
+                    
+                }
+                
+            };
+        }
+       
+        
+    } failere:^(id error) {
+        
+        
+        
+    }];
+    
+    
+}
+
+
+- (NSMutableArray *)getData {
+    
+    NSMutableArray * adsArray = @[].mutableCopy;
+    
+    for (int i = 0; i < self.newsArr.count; i++) {
+        
+        JXNewsModel * newmodel = self.newsArr[i];
+        
+        ADRollModel *model = [[ADRollModel alloc] init];
+        
+        model.noticeType = newmodel.news_type_name;
+        
+        model.noticeTitle =newmodel.news_content;
+        
+        model.urlString = newmodel.news_url;
+        
+        [adsArray addObject:model];
+    }
+    
+    return adsArray;
+}
 
 -(void)getPeopleInfoation{
 
