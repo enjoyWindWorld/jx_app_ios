@@ -163,6 +163,29 @@
 		56DBCEB51F3C531800300BB6 /* JXMsgPlaySound.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DBCEB41F3C531800300BB6 /* JXMsgPlaySound.m */; };
 		56FB6C3F1FBEC63C00340D81 /* JXAfterFilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FB6C3D1FBEC63C00340D81 /* JXAfterFilterTableViewCell.m */; };
 		56FB6C401FBEC63C00340D81 /* JXAfterFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56FB6C3E1FBEC63C00340D81 /* JXAfterFilterTableViewCell.xib */; };
+		A25ECA172099FCC1001F76EC /* RegTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA162099FCC1001F76EC /* RegTableViewCell.m */; };
+		A25ECA1A209A0033001F76EC /* RegLocalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA19209A0033001F76EC /* RegLocalModel.m */; };
+		A25ECA32209A0692001F76EC /* JFCityCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA1D209A0692001F76EC /* JFCityCollectionViewCell.m */; };
+		A25ECA33209A0692001F76EC /* JFLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA1F209A0692001F76EC /* JFLocation.m */; };
+		A25ECA34209A0692001F76EC /* JFAreaDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA23209A0692001F76EC /* JFAreaDataManager.m */; };
+		A25ECA35209A0692001F76EC /* JFCityHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA25209A0692001F76EC /* JFCityHeaderView.m */; };
+		A25ECA36209A0692001F76EC /* JFSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA26209A0692001F76EC /* JFSearchView.m */; };
+		A25ECA37209A0692001F76EC /* JFCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA27209A0692001F76EC /* JFCityViewController.m */; };
+		A25ECA38209A0692001F76EC /* JFCityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA28209A0692001F76EC /* JFCityTableViewCell.m */; };
+		A25ECA39209A0692001F76EC /* JFCityCollectionFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA29209A0692001F76EC /* JFCityCollectionFlowLayout.m */; };
+		A25ECA3A209A0692001F76EC /* JFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA2B209A0692001F76EC /* JFButton.m */; };
+		A25ECA3B209A0692001F76EC /* location.db in Resources */ = {isa = PBXBuildFile; fileRef = A25ECA2F209A0692001F76EC /* location.db */; };
+		A25ECA57209A0711001F76EC /* AddressItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA3F209A0711001F76EC /* AddressItem.m */; };
+		A25ECA58209A0711001F76EC /* ChooseLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA43209A0711001F76EC /* ChooseLocationView.m */; };
+		A25ECA59209A0711001F76EC /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25ECA44209A0711001F76EC /* AddressTableViewCell.xib */; };
+		A25ECA5A209A0711001F76EC /* AddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA45209A0711001F76EC /* AddressView.m */; };
+		A25ECA5B209A0711001F76EC /* AddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA47209A0711001F76EC /* AddressTableViewCell.m */; };
+		A25ECA5C209A0711001F76EC /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA4A209A0711001F76EC /* FMDatabaseQueue.m */; };
+		A25ECA5D209A0711001F76EC /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA4D209A0711001F76EC /* FMDatabaseAdditions.m */; };
+		A25ECA5E209A0712001F76EC /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA4E209A0711001F76EC /* FMDatabase.m */; };
+		A25ECA5F209A0712001F76EC /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA52209A0711001F76EC /* FMDatabasePool.m */; };
+		A25ECA60209A0712001F76EC /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA53209A0711001F76EC /* FMResultSet.m */; };
+		A25ECA61209A0712001F76EC /* CitiesDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA56209A0711001F76EC /* CitiesDataTool.m */; };
 		A26DDA4A20923C1D00FD2359 /* ADRollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A26DDA2A20923C1D00FD2359 /* ADRollView.m */; };
 		A26DDA4B20923C1D00FD2359 /* ADRollModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A26DDA2B20923C1D00FD2359 /* ADRollModel.m */; };
 		A26DDA4C20923C1D00FD2359 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A26DDA2E20923C1D00FD2359 /* LICENSE */; };
@@ -177,6 +200,8 @@
 		A26DDA5520923C1D00FD2359 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A26DDA4720923C1D00FD2359 /* MASViewConstraint.m */; };
 		A26DDA5620923C1D00FD2359 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A26DDA4820923C1D00FD2359 /* MASViewAttribute.m */; };
 		A26DDA5720923C1D00FD2359 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A26DDA4920923C1D00FD2359 /* README.md */; };
+		A26DDA5A209360A900FD2359 /* Icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A26DDA58209360A700FD2359 /* Icon@3x.png */; };
+		A26DDA5B209360A900FD2359 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A26DDA59209360A900FD2359 /* Icon@2x.png */; };
 		A26F295D20879E1D00D68FBB /* UIButton+myFont.m in Sources */ = {isa = PBXBuildFile; fileRef = A26F295C20879E1D00D68FBB /* UIButton+myFont.m */; };
 		A273E5FA2090EC28001FD91B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A273E5F92090EC28001FD91B /* CoreGraphics.framework */; };
 		A273E5FC2090ECD3001FD91B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A273E5FB2090ECD3001FD91B /* libsqlite3.tbd */; };
@@ -189,8 +214,6 @@
 		A273E62C2090EE36001FD91B /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A273E60F2090EE36001FD91B /* libWeChatSDK.a */; };
 		A273E62D2090EE36001FD91B /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = A273E6102090EE36001FD91B /* read_me.txt */; };
 		A2DB2D8920921859009B9900 /* JXNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB2D8820921859009B9900 /* JXNewsModel.m */; };
-		A2DB2D8C2092238A009B9900 /* Icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2DB2D8A2092238A009B9900 /* Icon@3x.png */; };
-		A2DB2D8D2092238A009B9900 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A2DB2D8B2092238A009B9900 /* Icon@2x.png */; };
 		A2DB2D90209232F6009B9900 /* JXChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DB2D8F209232F6009B9900 /* JXChildViewController.m */; };
 		D3A13859224376FAB8B2BEF2 /* libPods-JXPartner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F7BDA2F43B00A8CF4AF79BD /* libPods-JXPartner.a */; };
 /* End PBXBuildFile section */
@@ -482,6 +505,51 @@
 		56FB6C3C1FBEC63C00340D81 /* JXAfterFilterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXAfterFilterTableViewCell.h; sourceTree = "<group>"; };
 		56FB6C3D1FBEC63C00340D81 /* JXAfterFilterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXAfterFilterTableViewCell.m; sourceTree = "<group>"; };
 		56FB6C3E1FBEC63C00340D81 /* JXAfterFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JXAfterFilterTableViewCell.xib; sourceTree = "<group>"; };
+		A25ECA152099FCC1001F76EC /* RegTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegTableViewCell.h; sourceTree = "<group>"; };
+		A25ECA162099FCC1001F76EC /* RegTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegTableViewCell.m; sourceTree = "<group>"; };
+		A25ECA18209A0033001F76EC /* RegLocalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegLocalModel.h; sourceTree = "<group>"; };
+		A25ECA19209A0033001F76EC /* RegLocalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegLocalModel.m; sourceTree = "<group>"; };
+		A25ECA1C209A0692001F76EC /* JFCityCollectionFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFCityCollectionFlowLayout.h; sourceTree = "<group>"; };
+		A25ECA1D209A0692001F76EC /* JFCityCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFCityCollectionViewCell.m; sourceTree = "<group>"; };
+		A25ECA1F209A0692001F76EC /* JFLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFLocation.m; sourceTree = "<group>"; };
+		A25ECA20209A0692001F76EC /* JFLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFLocation.h; sourceTree = "<group>"; };
+		A25ECA22209A0692001F76EC /* JFAreaDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFAreaDataManager.h; sourceTree = "<group>"; };
+		A25ECA23209A0692001F76EC /* JFAreaDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFAreaDataManager.m; sourceTree = "<group>"; };
+		A25ECA24209A0692001F76EC /* JFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFButton.h; sourceTree = "<group>"; };
+		A25ECA25209A0692001F76EC /* JFCityHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFCityHeaderView.m; sourceTree = "<group>"; };
+		A25ECA26209A0692001F76EC /* JFSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFSearchView.m; sourceTree = "<group>"; };
+		A25ECA27209A0692001F76EC /* JFCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFCityViewController.m; sourceTree = "<group>"; };
+		A25ECA28209A0692001F76EC /* JFCityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFCityTableViewCell.m; sourceTree = "<group>"; };
+		A25ECA29209A0692001F76EC /* JFCityCollectionFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFCityCollectionFlowLayout.m; sourceTree = "<group>"; };
+		A25ECA2A209A0692001F76EC /* JFCityCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFCityCollectionViewCell.h; sourceTree = "<group>"; };
+		A25ECA2B209A0692001F76EC /* JFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JFButton.m; sourceTree = "<group>"; };
+		A25ECA2C209A0692001F76EC /* JFCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFCityViewController.h; sourceTree = "<group>"; };
+		A25ECA2D209A0692001F76EC /* JFCityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFCityTableViewCell.h; sourceTree = "<group>"; };
+		A25ECA2F209A0692001F76EC /* location.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = location.db; sourceTree = "<group>"; };
+		A25ECA30209A0692001F76EC /* JFSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFSearchView.h; sourceTree = "<group>"; };
+		A25ECA31209A0692001F76EC /* JFCityHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JFCityHeaderView.h; sourceTree = "<group>"; };
+		A25ECA3E209A0711001F76EC /* AddressItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressItem.h; sourceTree = "<group>"; };
+		A25ECA3F209A0711001F76EC /* AddressItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressItem.m; sourceTree = "<group>"; };
+		A25ECA41209A0711001F76EC /* AddressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressView.h; sourceTree = "<group>"; };
+		A25ECA42209A0711001F76EC /* AddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTableViewCell.h; sourceTree = "<group>"; };
+		A25ECA43209A0711001F76EC /* ChooseLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseLocationView.m; sourceTree = "<group>"; };
+		A25ECA44209A0711001F76EC /* AddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressTableViewCell.xib; sourceTree = "<group>"; };
+		A25ECA45209A0711001F76EC /* AddressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressView.m; sourceTree = "<group>"; };
+		A25ECA46209A0711001F76EC /* ChooseLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseLocationView.h; sourceTree = "<group>"; };
+		A25ECA47209A0711001F76EC /* AddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewCell.m; sourceTree = "<group>"; };
+		A25ECA49209A0711001F76EC /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		A25ECA4A209A0711001F76EC /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		A25ECA4B209A0711001F76EC /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		A25ECA4C209A0711001F76EC /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		A25ECA4D209A0711001F76EC /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A25ECA4E209A0711001F76EC /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		A25ECA4F209A0711001F76EC /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		A25ECA50209A0711001F76EC /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		A25ECA51209A0711001F76EC /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A25ECA52209A0711001F76EC /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		A25ECA53209A0711001F76EC /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		A25ECA55209A0711001F76EC /* CitiesDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesDataTool.h; sourceTree = "<group>"; };
+		A25ECA56209A0711001F76EC /* CitiesDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesDataTool.m; sourceTree = "<group>"; };
 		A26DDA2920923C1D00FD2359 /* ADRollModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADRollModel.h; sourceTree = "<group>"; };
 		A26DDA2A20923C1D00FD2359 /* ADRollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADRollView.m; sourceTree = "<group>"; };
 		A26DDA2B20923C1D00FD2359 /* ADRollModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADRollModel.m; sourceTree = "<group>"; };
@@ -513,6 +581,8 @@
 		A26DDA4720923C1D00FD2359 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		A26DDA4820923C1D00FD2359 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		A26DDA4920923C1D00FD2359 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A26DDA58209360A700FD2359 /* Icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@3x.png"; sourceTree = "<group>"; };
+		A26DDA59209360A900FD2359 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		A26F295B20879E1D00D68FBB /* UIButton+myFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+myFont.h"; sourceTree = "<group>"; };
 		A26F295C20879E1D00D68FBB /* UIButton+myFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+myFont.m"; sourceTree = "<group>"; };
 		A273E5F92090EC28001FD91B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -531,8 +601,6 @@
 		A273E6102090EE36001FD91B /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
 		A2DB2D8720921859009B9900 /* JXNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JXNewsModel.h; path = ../../../../../../JXSmart2/SmartPurifieriOS/Classess/Modules/HomePage/Models/JXNewsModel.h; sourceTree = "<group>"; };
 		A2DB2D8820921859009B9900 /* JXNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JXNewsModel.m; path = ../../../../../../JXSmart2/SmartPurifieriOS/Classess/Modules/HomePage/Models/JXNewsModel.m; sourceTree = "<group>"; };
-		A2DB2D8A2092238A009B9900 /* Icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@3x.png"; path = "../../JXSmart2/SmartPurifieriOS/Assets.xcassets/AppIcon.appiconset/Icon@3x.png"; sourceTree = "<group>"; };
-		A2DB2D8B2092238A009B9900 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../JXSmart2/SmartPurifieriOS/Assets.xcassets/AppIcon.appiconset/Icon@2x.png"; sourceTree = "<group>"; };
 		A2DB2D8E209232F6009B9900 /* JXChildViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXChildViewController.h; sourceTree = "<group>"; };
 		A2DB2D8F209232F6009B9900 /* JXChildViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXChildViewController.m; sourceTree = "<group>"; };
 		A35D430893D517746864F253 /* Pods-JXPartner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXPartner.release.xcconfig"; path = "Pods/Target Support Files/Pods-JXPartner/Pods-JXPartner.release.xcconfig"; sourceTree = "<group>"; };
@@ -750,8 +818,8 @@
 			isa = PBXGroup;
 			children = (
 				56923F251F4574C8007937AE /* JXPartner.entitlements */,
-				A2DB2D8B2092238A009B9900 /* Icon@2x.png */,
-				A2DB2D8A2092238A009B9900 /* Icon@3x.png */,
+				A26DDA59209360A900FD2359 /* Icon@2x.png */,
+				A26DDA58209360A700FD2359 /* Icon@3x.png */,
 				56AFDD481F3AAE6B00830166 /* AppDelegate.h */,
 				56AFDD491F3AAE6B00830166 /* AppDelegate.m */,
 				56AFDD4B1F3AAE6B00830166 /* ViewController.h */,
@@ -1003,6 +1071,8 @@
 			children = (
 				56D04EF21F3D40EC00D1EBED /* SPUserModel.h */,
 				56D04EF31F3D40EC00D1EBED /* SPUserModel.m */,
+				A25ECA18209A0033001F76EC /* RegLocalModel.h */,
+				A25ECA19209A0033001F76EC /* RegLocalModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1026,6 +1096,8 @@
 				56D04EFF1F3D40EC00D1EBED /* SPRegisiterViewController.m */,
 				56D04F001F3D40EC00D1EBED /* SPResetPasswordViewController.h */,
 				56D04F011F3D40EC00D1EBED /* SPResetPasswordViewController.m */,
+				A25ECA152099FCC1001F76EC /* RegTableViewCell.h */,
+				A25ECA162099FCC1001F76EC /* RegTableViewCell.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1099,6 +1171,8 @@
 		56DBCE4F1F3C290100300BB6 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				A25ECA3C209A0711001F76EC /* ChooseHomeAddress */,
+				A25ECA1B209A0692001F76EC /* JFCityViewController */,
 				A26DDA2820923C1D00FD2359 /* ADRollView */,
 				A26DDA2D20923C1D00FD2359 /* Masonry */,
 				A273E5FF2090EE36001FD91B /* umeng_ios_social_sdk_6.1.0_arm64_custom */,
@@ -1221,6 +1295,119 @@
 				56D04EE41F3D40EC00D1EBED /* Main */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		A25ECA1B209A0692001F76EC /* JFCityViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A25ECA1C209A0692001F76EC /* JFCityCollectionFlowLayout.h */,
+				A25ECA1D209A0692001F76EC /* JFCityCollectionViewCell.m */,
+				A25ECA1E209A0692001F76EC /* Location */,
+				A25ECA21209A0692001F76EC /* AreaDataManager */,
+				A25ECA24209A0692001F76EC /* JFButton.h */,
+				A25ECA25209A0692001F76EC /* JFCityHeaderView.m */,
+				A25ECA26209A0692001F76EC /* JFSearchView.m */,
+				A25ECA27209A0692001F76EC /* JFCityViewController.m */,
+				A25ECA28209A0692001F76EC /* JFCityTableViewCell.m */,
+				A25ECA29209A0692001F76EC /* JFCityCollectionFlowLayout.m */,
+				A25ECA2A209A0692001F76EC /* JFCityCollectionViewCell.h */,
+				A25ECA2B209A0692001F76EC /* JFButton.m */,
+				A25ECA2C209A0692001F76EC /* JFCityViewController.h */,
+				A25ECA2D209A0692001F76EC /* JFCityTableViewCell.h */,
+				A25ECA2E209A0692001F76EC /* AreaDB */,
+				A25ECA30209A0692001F76EC /* JFSearchView.h */,
+				A25ECA31209A0692001F76EC /* JFCityHeaderView.h */,
+			);
+			name = JFCityViewController;
+			path = ../../../../JXSmart2/SmartPurifieriOS/Classess/Vendor/JFCityViewController;
+			sourceTree = "<group>";
+		};
+		A25ECA1E209A0692001F76EC /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				A25ECA1F209A0692001F76EC /* JFLocation.m */,
+				A25ECA20209A0692001F76EC /* JFLocation.h */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		A25ECA21209A0692001F76EC /* AreaDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A25ECA22209A0692001F76EC /* JFAreaDataManager.h */,
+				A25ECA23209A0692001F76EC /* JFAreaDataManager.m */,
+			);
+			path = AreaDataManager;
+			sourceTree = "<group>";
+		};
+		A25ECA2E209A0692001F76EC /* AreaDB */ = {
+			isa = PBXGroup;
+			children = (
+				A25ECA2F209A0692001F76EC /* location.db */,
+			);
+			path = AreaDB;
+			sourceTree = "<group>";
+		};
+		A25ECA3C209A0711001F76EC /* ChooseHomeAddress */ = {
+			isa = PBXGroup;
+			children = (
+				A25ECA3D209A0711001F76EC /* Model */,
+				A25ECA40209A0711001F76EC /* View */,
+				A25ECA48209A0711001F76EC /* fmdb */,
+				A25ECA54209A0711001F76EC /* Tool */,
+			);
+			name = ChooseHomeAddress;
+			path = ../../../../JXSmart2/SmartPurifieriOS/Classess/CustomViews/ChooseHomeAddress;
+			sourceTree = "<group>";
+		};
+		A25ECA3D209A0711001F76EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A25ECA3E209A0711001F76EC /* AddressItem.h */,
+				A25ECA3F209A0711001F76EC /* AddressItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A25ECA40209A0711001F76EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A25ECA41209A0711001F76EC /* AddressView.h */,
+				A25ECA42209A0711001F76EC /* AddressTableViewCell.h */,
+				A25ECA43209A0711001F76EC /* ChooseLocationView.m */,
+				A25ECA44209A0711001F76EC /* AddressTableViewCell.xib */,
+				A25ECA45209A0711001F76EC /* AddressView.m */,
+				A25ECA46209A0711001F76EC /* ChooseLocationView.h */,
+				A25ECA47209A0711001F76EC /* AddressTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A25ECA48209A0711001F76EC /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				A25ECA49209A0711001F76EC /* FMDatabase.h */,
+				A25ECA4A209A0711001F76EC /* FMDatabaseQueue.m */,
+				A25ECA4B209A0711001F76EC /* FMResultSet.h */,
+				A25ECA4C209A0711001F76EC /* FMDatabasePool.h */,
+				A25ECA4D209A0711001F76EC /* FMDatabaseAdditions.m */,
+				A25ECA4E209A0711001F76EC /* FMDatabase.m */,
+				A25ECA4F209A0711001F76EC /* FMDatabaseQueue.h */,
+				A25ECA50209A0711001F76EC /* FMDB.h */,
+				A25ECA51209A0711001F76EC /* FMDatabaseAdditions.h */,
+				A25ECA52209A0711001F76EC /* FMDatabasePool.m */,
+				A25ECA53209A0711001F76EC /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		A25ECA54209A0711001F76EC /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				A25ECA55209A0711001F76EC /* CitiesDataTool.h */,
+				A25ECA56209A0711001F76EC /* CitiesDataTool.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		A26DDA2820923C1D00FD2359 /* ADRollView */ = {
@@ -1438,17 +1625,19 @@
 				561104441F948D450083D1A6 /* LoginBG1125*2536.png in Resources */,
 				56AFDD521F3AAE6B00830166 /* Assets.xcassets in Resources */,
 				56D04F051F3D40EC00D1EBED /* LoginBGI640*1136.png in Resources */,
+				A25ECA59209A0711001F76EC /* AddressTableViewCell.xib in Resources */,
 				56D04F071F3D40EC00D1EBED /* LoginBGI750*1334.png in Resources */,
 				568B4A251F4D12760074F770 /* 1.png in Resources */,
-				A2DB2D8C2092238A009B9900 /* Icon@3x.png in Resources */,
-				A2DB2D8D2092238A009B9900 /* Icon@2x.png in Resources */,
 				567AF52C1F41BA9C00BA5B6D /* JXPartnerItemCollectionViewCell.xib in Resources */,
+				A26DDA5B209360A900FD2359 /* Icon@2x.png in Resources */,
+				A25ECA3B209A0692001F76EC /* location.db in Resources */,
 				A273E62B2090EE36001FD91B /* README.txt in Resources */,
 				56B1386C1F43F1E300624271 /* orderTWoTableViewCell.xib in Resources */,
 				56D04F0A1F3D40EC00D1EBED /* MainPage.storyboard in Resources */,
 				56B1386A1F43F1E300624271 /* OrderOneTableViewCell.xib in Resources */,
 				56D04F041F3D40EC00D1EBED /* LoginBGI1242*2208.png in Resources */,
 				56C7E2491FC5491900528E96 /* star_nor@3x.png in Resources */,
+				A26DDA5A209360A900FD2359 /* Icon@3x.png in Resources */,
 				56C7E2481FC5491900528E96 /* star_nor@2x.png in Resources */,
 				56FB6C401FBEC63C00340D81 /* JXAfterFilterTableViewCell.xib in Resources */,
 				56436A5F1F58F34800EB983A /* backItemImage_hl@2x.png in Resources */,
@@ -1522,13 +1711,16 @@
 			files = (
 				56FB6C3F1FBEC63C00340D81 /* JXAfterFilterTableViewCell.m in Sources */,
 				56B78B4F1FBC1F6D00F222CF /* EVNCustomSearchBar.m in Sources */,
+				A25ECA36209A0692001F76EC /* JFSearchView.m in Sources */,
 				A26DDA5220923C1D00FD2359 /* NSArray+MASAdditions.m in Sources */,
 				56B062AE1F9058A700504BF1 /* JDStatusBarLayoutMarginHelper.m in Sources */,
 				56B78B4A1FBC0F7800F222CF /* JXFilterTableViewCell.m in Sources */,
 				56B062AF1F9058A700504BF1 /* JDStatusBarNotification.m in Sources */,
+				A25ECA32209A0692001F76EC /* JFCityCollectionViewCell.m in Sources */,
 				56B062B01F9058A700504BF1 /* JDStatusBarStyle.m in Sources */,
 				56B062B11F9058A700504BF1 /* JDStatusBarView.m in Sources */,
 				A26DDA5320923C1D00FD2359 /* View+MASAdditions.m in Sources */,
+				A25ECA35209A0692001F76EC /* JFCityHeaderView.m in Sources */,
 				56B138721F43F24700624271 /* OrderLitModel.m in Sources */,
 				56D04F031F3D40EC00D1EBED /* SPMainModulesMacro.m in Sources */,
 				56D5F3F21FBD74D700D6400B /* JXNewAfterTableViewCell.m in Sources */,
@@ -1542,16 +1734,22 @@
 				56DBCEAC1F3C2C8100300BB6 /* UITableView+FDTemplateLayoutCell.m in Sources */,
 				567AF52B1F41BA9C00BA5B6D /* JXPartnerItemCollectionViewCell.m in Sources */,
 				56B138541F43EFC900624271 /* WMMenuView.m in Sources */,
+				A25ECA3A209A0692001F76EC /* JFButton.m in Sources */,
+				A25ECA172099FCC1001F76EC /* RegTableViewCell.m in Sources */,
 				56AFDD6A1F3AB0A700830166 /* DESEncrypt.m in Sources */,
 				56C7E2381FC548D700528E96 /* JXEvaluateViewController.m in Sources */,
 				56D04F0E1F3D40EC00D1EBED /* SPResetPasswordViewController.m in Sources */,
+				A25ECA60209A0712001F76EC /* FMResultSet.m in Sources */,
 				56D04F261F3D411900D1EBED /* STChildViewController.m in Sources */,
 				56D04F281F3D411900D1EBED /* STNavigationController.m in Sources */,
 				56815B5A1F56C2EB001967F2 /* JXSubPartnerUpdateTableViewController.m in Sources */,
+				A25ECA5A209A0711001F76EC /* AddressView.m in Sources */,
 				56D5F4001FBD751D00D6400B /* MAddImageCollectionView.m in Sources */,
+				A25ECA5C209A0711001F76EC /* FMDatabaseQueue.m in Sources */,
 				56DBCE591F3C292F00300BB6 /* YYCache.m in Sources */,
 				5652DE2E1F4E7BD80001F172 /* JXNewIncomeTableViewController.m in Sources */,
 				56D04F3A1F3D426B00D1EBED /* SPBaseNetWorkRequst.m in Sources */,
+				A25ECA5E209A0712001F76EC /* FMDatabase.m in Sources */,
 				5673AF6C1FBAF26A00539D64 /* JXPlanFilterLifeModel.m in Sources */,
 				56C7E2501FC5494B00528E96 /* JXEvaluateModel.m in Sources */,
 				A26DDA4E20923C1D00FD2359 /* ViewController+MASAdditions.m in Sources */,
@@ -1559,10 +1757,13 @@
 				56D5F4031FBD751D00D6400B /* MImageModel.m in Sources */,
 				564A8EF71FC2AC1F00A78DAE /* JXFilterLifeTableViewCell.m in Sources */,
 				56D5F4081FBD75C300D6400B /* JXAfterListModel.m in Sources */,
+				A25ECA37209A0692001F76EC /* JFCityViewController.m in Sources */,
+				A25ECA57209A0711001F76EC /* AddressItem.m in Sources */,
 				A26DDA5020923C1D00FD2359 /* MASConstraintMaker.m in Sources */,
 				56DBCE5A1F3C292F00300BB6 /* YYDiskCache.m in Sources */,
 				56B138571F43EFC900624271 /* WMPageController.m in Sources */,
 				56DBCE951F3C2A5700300BB6 /* UIViewController+HUD.m in Sources */,
+				A25ECA5B209A0711001F76EC /* AddressTableViewCell.m in Sources */,
 				56D04F0B1F3D40EC00D1EBED /* SPFindPasswordViewController.m in Sources */,
 				56923F1B1F45373D007937AE /* JXSubParnerTableViewCell.m in Sources */,
 				56DBCE831F3C29C600300BB6 /* UIColor+HexColor.m in Sources */,
@@ -1576,6 +1777,7 @@
 				56923F181F453071007937AE /* JXSubPartnerModel.m in Sources */,
 				56B1385D1F43F13600624271 /* OrderDeitalViewController.m in Sources */,
 				56D04F241F3D411900D1EBED /* SPBaseViewController.m in Sources */,
+				A25ECA5F209A0712001F76EC /* FMDatabasePool.m in Sources */,
 				56B138731F43F24700624271 /* OrderDetailModel.m in Sources */,
 				A26DDA5620923C1D00FD2359 /* MASViewAttribute.m in Sources */,
 				56B1385C1F43F13600624271 /* MyOrderViewController.m in Sources */,
@@ -1585,9 +1787,11 @@
 				5673AF631FBA9A2200539D64 /* JXEvaluateTableViewController.m in Sources */,
 				56923F211F456853007937AE /* JXIncomeHistoryViewController.m in Sources */,
 				56DBCE5B1F3C292F00300BB6 /* YYKVStorage.m in Sources */,
+				A25ECA38209A0692001F76EC /* JFCityTableViewCell.m in Sources */,
 				56D04F3B1F3D426B00D1EBED /* SPBaseResponseHandler.m in Sources */,
 				5697DD1F1F6290C300EE39BF /* UIView+MGBadgeView.m in Sources */,
 				A26DDA4B20923C1D00FD2359 /* ADRollModel.m in Sources */,
+				A25ECA33209A0692001F76EC /* JFLocation.m in Sources */,
 				56A9693A1F5FED3F00D39893 /* JXIncomeHistoryMoneyTableViewCell.m in Sources */,
 				5673AF691FBADAED00539D64 /* JXPlanFilterLifeViewController.m in Sources */,
 				56AFDD6B1F3AB0A700830166 /* GTMBase64.m in Sources */,
@@ -1595,6 +1799,7 @@
 				56DBCEAB1F3C2C8100300BB6 /* UITableView+FDKeyedHeightCache.m in Sources */,
 				56DBCE921F3C2A5700300BB6 /* UIScrollView+EmptyView.m in Sources */,
 				5673AF6F1FBAF39E00539D64 /* JXFitlerModel.m in Sources */,
+				A25ECA39209A0692001F76EC /* JFCityCollectionFlowLayout.m in Sources */,
 				56D04F091F3D40EC00D1EBED /* SPLoginElectricityEntrance.m in Sources */,
 				56DBCE821F3C29C600300BB6 /* UIButton+TimerClass.m in Sources */,
 				56D04F291F3D411900D1EBED /* SPBaseModel.m in Sources */,
@@ -1608,6 +1813,7 @@
 				56DBCE841F3C29C600300BB6 /* UIView+Frame.m in Sources */,
 				A2DB2D8920921859009B9900 /* JXNewsModel.m in Sources */,
 				56D5F4011FBD751D00D6400B /* MCollectionViewCell.m in Sources */,
+				A25ECA5D209A0711001F76EC /* FMDatabaseAdditions.m in Sources */,
 				56D5F3FE1FBD751D00D6400B /* MAddImageCell.m in Sources */,
 				56D04F0D1F3D40EC00D1EBED /* SPRegisiterViewController.m in Sources */,
 				56923F2B1F458DD1007937AE /* MyClarifierMessageTableViewCell.m in Sources */,
@@ -1625,6 +1831,7 @@
 				56B138691F43F1E300624271 /* OrderOneTableViewCell.m in Sources */,
 				56923F281F458D99007937AE /* MyClarifierMessageViewController.m in Sources */,
 				5652DE2B1F4E71B20001F172 /* JXIncomeHistoryModel.m in Sources */,
+				A25ECA34209A0692001F76EC /* JFAreaDataManager.m in Sources */,
 				56DBCE5C1F3C292F00300BB6 /* YYMemoryCache.m in Sources */,
 				A26DDA5420923C1D00FD2359 /* MASConstraint.m in Sources */,
 				56B138761F43F91200624271 /* UIImageView+PartWeb.m in Sources */,
@@ -1635,12 +1842,15 @@
 				56DBCE961F3C2A5700300BB6 /* UIViewController+Swizzle.m in Sources */,
 				56B1387E1F441FF200624271 /* JXPartnerOrderListTableViewCell.m in Sources */,
 				56AFDD4A1F3AAE6B00830166 /* AppDelegate.m in Sources */,
+				A25ECA1A209A0033001F76EC /* RegLocalModel.m in Sources */,
 				56D5F3E81FBD732600D6400B /* CustomAfterSalesViewController.m in Sources */,
 				56B138551F43EFC900624271 /* WMProgressView.m in Sources */,
 				5652DE311F4E81830001F172 /* JXCurrentIncomeDetailModel.m in Sources */,
+				A25ECA58209A0711001F76EC /* ChooseLocationView.m in Sources */,
 				56DBCEB51F3C531800300BB6 /* JXMsgPlaySound.m in Sources */,
 				56B138851F44378200624271 /* JXModifyPasswordViewController.m in Sources */,
 				56C7E23C1FC548FE00528E96 /* GCPlaceholderTextView.m in Sources */,
+				A25ECA61209A0712001F76EC /* CitiesDataTool.m in Sources */,
 				5665E7481F467E28006A037A /* JXBindingAliStateModel.m in Sources */,
 				56B1374D1F43EAAB00624271 /* CustomMyOrderListViewController.m in Sources */,
 				56D04F021F3D40EC00D1EBED /* SPMainLoginBusiness.m in Sources */,

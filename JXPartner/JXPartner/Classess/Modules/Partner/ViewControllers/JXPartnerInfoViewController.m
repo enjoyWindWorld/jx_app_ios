@@ -16,10 +16,11 @@
 #import "UIView+MGBadgeView.h"
 #import "ADRollView.h"
 #import "JXNewsModel.h"
+#import "RxWebViewController.h"
 
 #define ITEMTEXTKEY @"ITEMTEXTKEY"
 #define ITEMIMAGEKEY @"ITEMIMAGEKEY"
-#define NormarOperater 1
+#define NormarOperater 0  //达到条件
 
 
 @interface JXPartnerInfoViewController ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UINavigationControllerDelegate>
@@ -62,8 +63,8 @@
         
         [self  requestPartnerInfoation];
     }else{
-//        不是运营商 但符合条件
-        if ((model.operatorInter == NormarOperater) &&  model.level != 1) {
+        
+        if ((model.operatorInter == NormarOperater) ) {
             UIAlertController * ale = [UIAlertController alertControllerWithTitle:@"提示" message:@"你已经达到升级运营商的条件了!" preferredStyle:UIAlertControllerStyleAlert];
      
         
@@ -91,7 +92,7 @@
                               @{ITEMTEXTKEY:@"订单管理",ITEMIMAGEKEY:@"ordermanager"},
                               @{ITEMTEXTKEY:@"我的收入",ITEMIMAGEKEY:@"mymoney"},
                               @{ITEMTEXTKEY:@"我的e家",ITEMIMAGEKEY:@"subparnter"},
-                              @{ITEMTEXTKEY:@"售后管理",ITEMIMAGEKEY:@"subparnter"},
+//                              @{ITEMTEXTKEY:@"售后管理",ITEMIMAGEKEY:@"subparnter"},
                               @{ITEMTEXTKEY:@"我的消息",ITEMIMAGEKEY:@"mymessage"},
                               @{ITEMTEXTKEY:@"设置",ITEMIMAGEKEY:@"setting"}];
     
@@ -122,11 +123,11 @@
                 
                 if (weakself.newsArr.count>index) {
                     
-                    JXNewsModel * newmodel = self.newsArr[index];
+                    JXNewsModel * newmodel = weakself.newsArr[index];
                     
-                    //                RxWebViewController * web = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:newmodel.news_url]];
-                    //
-                    //                [self.navigationController pushViewController:web animated:YES];
+                    RxWebViewController * web = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:newmodel.news_url]];
+                    
+                    [weakself.navigationController pushViewController:web animated:YES];
                     
                 }
                 
@@ -175,8 +176,8 @@
         NSString * name = [NSString stringWithFormat:@"姓名:%@",model.username];
         NSString * numberid = [NSString stringWithFormat:@"编号:%@",model.partnerNumber];
         NSString * level = [NSString stringWithFormat:@"级别:%@",[JXPartnerModulesMacro fetchParnerLevelString:model.level]];
-        NSString * fathername = [NSString stringWithFormat:@"上级合伙人:%@",model.ParParentName];
-        NSString * fatherid= [NSString stringWithFormat:@"上级合伙人编号:%@",model.ParParentid];
+        NSString * fathername = [NSString stringWithFormat:@"所属运营商编号:%@",model.ParParentName];
+        NSString * fatherid= [NSString stringWithFormat:@"所属创客家园编号:%@",model.ParParentid];
         //        NSString * salesNumber = [NSString stringWithFormat:@"销售设备的总台数:%ld",(long)model.usernum];
         _tableViewDataSource = @[name,numberid,level,fathername,fatherid];
         
@@ -345,7 +346,7 @@
     
     cell.itemImage.image = [UIImage imageNamed:_collectionDataSource[indexPath.item][ITEMIMAGEKEY]];
     
-    if (indexPath.item == 4) {
+    if (indexPath.item == 3) {
         
         [cell.itemImage.badgeView setOutlineWidth:0.];
         
@@ -403,16 +404,17 @@
         
         [self.navigationController  pushViewController:vc animated:YES];
     }else if (indexPath.item == 3){
+        [self performSegueWithIdentifier:@"MyClarifierMessageViewController" sender:nil];
 
-        [self performSegueWithIdentifier:@"JXEvaluateTableViewController" sender:nil];
+//        [self performSegueWithIdentifier:@"JXEvaluateTableViewController" sender:nil];
     }
     else if (indexPath.item == 4){
-    
-        [self performSegueWithIdentifier:@"MyClarifierMessageViewController" sender:nil];
+     [self  performSegueWithIdentifier:@"JXPartnerSettingViewController" sender:nil];
+//        [self performSegueWithIdentifier:@"MyClarifierMessageViewController" sender:nil];
     
     }else if (indexPath.item == 5){
     
-         [self  performSegueWithIdentifier:@"JXPartnerSettingViewController" sender:nil];
+//         [self  performSegueWithIdentifier:@"JXPartnerSettingViewController" sender:nil];
     }
     
 }

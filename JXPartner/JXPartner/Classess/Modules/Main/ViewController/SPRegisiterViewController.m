@@ -10,13 +10,26 @@
 #import "SPMainLoginBusiness.h"
 #import "SPResetPasswordViewController.h"
 #import "UIButton+TimerClass.h"
-@interface SPRegisiterViewController ()<UITableViewDataSource,UITableViewDelegate>
+#import "RegTableViewCell.h"
+#import "RxWebViewController.h"
+#import "RegLocalModel.h"
+@interface SPRegisiterViewController ()<UITableViewDelegate,UITableViewDataSource,JXRegTableViewCellTableViewCellDelegate>
 
 @property(nonatomic,strong) SPMainLoginBusiness * buessiness;
 
 @property (weak, nonatomic) IBOutlet UIButton *regisButton;
+@property (weak, nonatomic) IBOutlet UIButton *rulesBtn;
 
-//@property(nonatomic,copy) NSString * smscodeStr;
+@property (weak, nonatomic) IBOutlet UITableView *myTable;
+
+@property (nonatomic,strong) UIView * agreementView ;
+
+@property (nonatomic,strong) UIButton * checkBT ;
+
+@property (nonatomic,strong) NSMutableArray * datas ;
+
+@property (nonatomic,strong) NSArray * localArr ;
+
 
 @end
 
@@ -25,11 +38,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self setNavBarTitle:@"注册"];
-//
-//    [self setNavBarLeftBtn:[STNavBarView createImgNaviBarBtnByImgNormal:@"nav_back" imgHighlight:@"nav_back_highlighted" target:self action:@selector(viewGoPop)]];
+    [self setNavBarTitle:@"注册"];
+
+    [self setNavBarLeftBtn:[STNavBarView createImgNaviBarBtnByImgNormal:@"nav_back" imgHighlight:@"nav_back_highlighted" target:self action:@selector(viewGoPop)]];
     
-    [self.regisButton addTarget:self action:@selector(requestRegisiter:) forControlEvents:UIControlEventTouchUpInside];
+    self.myTable.tableFooterView = self.agreementView;
+    
+    self.myTable.bounces = NO ;
+
     
 //    [self.tableView setContentInset:UIEdgeInsetsMake(50, 0, 0, 0)];
     
@@ -46,87 +62,177 @@
     
 }
 
-#pragma mark - 请求注册
--(void)requestRegisiter:(UIButton*)bt{
-
-   
+- (IBAction)regAction:(id)sender {
     
-   ////校验验证码
-//      [SPSVProgressHUD showWithStatus:@"请稍后..."];
-    
-    __weak typeof(self) weakself = self ;
-    
-    [self.buessiness requestUserRegister:@{} success:^(id result) {
+    for (RegLocalModel * mdoel in self.datas) {
         
+        if (mdoel.rightContent.length == 0) {
+            
+            [self makeToast:[NSString stringWithFormat:@"请输入%@",mdoel.leftText]];
+//            break ;
+            return;
+        }
+    }
+    
+    NSMutableDictionary * dic = [NSMutableDictionary dictionary];
+    dic[@"RecommenderCode"] = ((RegLocalModel*)self.datas[0]).rightContent;
+    dic[@"NameReferee"] = ((RegLocalModel*)self.datas[1]).rightContent;
+    //order
+    dic[@"ord_no"] = ((RegLocalModel*)self.datas[2]).rightContent;
+    dic[@"nameApplicant"] = ((RegLocalModel*)self.datas[3]).rightContent;
+    dic[@"cardNumber"] = ((RegLocalModel*)self.datas[4]).rightContent;
+    dic[@"s_province"] = self.localArr[0];
+    dic[@"s_city"] = self.localArr[1];
+    dic[@"s_county"] = self.localArr[2];
+    dic[@"homeAddress"] = ((RegLocalModel*)self.datas[7]).rightContent;
+    
+    
+    [self.buessiness requestUserRegister:dic success:^(id result) {
         
     } failer:^(id error) {
         
     }];
     
-
     
-
-
+    
 }
 
 
-#pragma mark - 请求发送验证码
--(void)requestRegisiterCode:(UIButton*)bt{
-    
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
    
-    
-    [bt statrTimerWithDefaultTime:60 block:nil];
-    
-    [self privateRequestRegisiterCode];
+    return self.datas.count;
+}
 
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    RegTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"CELL0" forIndexPath:indexPath];
+    
+    cell.delegate = self ;
+    
+    cell.indexPath = indexPath ;
+    
+    cell.vc = self ;
+    
+    __weak typeof(self) weakself = self ;
+    [cell setChooseFinish:^(NSArray *arrData) {
+        weakself.localArr = arrData ;
+    }];
+    
+    RegLocalModel * model = self.datas[indexPath.row];
+    
+    cell.leftLabel.text = model.leftText;
+    
+    cell.contentText.text = model.rightContent ;
+
+    return cell ;
+    
+}
+
+-(void)cell_RegTextChange:(NSString *)text index:(NSIndexPath *)index{
+    
+   RegLocalModel * mdoel  = self.datas[index.row];
+    
+    if (mdoel) {
+        mdoel.rightContent = text ;
+    }
+    if (index.row == 6) {
+        
+        [self.myTable reloadData];
+    }
+    
 }
 
 
-#pragma mark - PRIVATE METHOD
-
--(void)privateRequestRegisiterCode{
-
-//    __weak typeof(self) weakslef = self ;
-////    type=0表示注册，type=1表示找回密码
-//    NSDictionary * dic = @{@"phoneNum":_phoneText.text,@"type":@"0"};
-//
-//    [self.buessiness userRegisterSMSCode:dic success:^(id result) {
-//
-//        if ([result isKindOfClass:[NSArray class]]) {
-//
-//            for (NSDictionary *dic in result) {
-//
-//               NSString * smsCode  = [dic objectForKey:@"code"];
-//
-////                _smscodeStr = smsCode ;
-//            }
-//
-////            [SPToastHUD makeToast:@"发送成功" duration:3 position:nil makeView:weakslef.view];
-//
-//        }
-//
-//    } failer:^(NSString *error) {
-//
-////        [SPToastHUD makeToast:error duration:3 position:nil makeView:weakslef.view];
-//    }];
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 45.f;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
 
-    if ([segue.identifier isEqualToString:@"SPResetPasswordViewController"]) {
+
+#pragma mark - 前往服务协议
+-(void)forwardAgreement{
+    
+    NSURL * url = [NSURL URLWithString:@"http://www.szjxzn.tech:8080/old_jx/pdf/agreement.pdf"];
+    
+    SPAgreetmentWebViewController* webViewController = [[SPAgreetmentWebViewController alloc] initWithUrl:url];
+    
+    webViewController.title = @"使用服务协议";
+    
+    __weak typeof(self) weakself = self;
+    
+    webViewController.confirmSelect = ^{
         
-        SPResetPasswordViewController  * vc= segue.destinationViewController ;
+        weakself.checkBT.selected = YES;
         
-        vc.type = SPResetPwdType_RegisiterPWD;
+    };
+    
+    [self.navigationController pushViewController:webViewController animated:YES];
+    
+}
+
+
+#pragma mark - 更新按钮
+-(void)confirmAgreement{
+    
+    BOOL iselect = _checkBT.selected;
+    
+    _checkBT.selected = !iselect;
+    
+}
+
+-(UIView *)agreementView{
+    
+    if (_agreementView == nil) {
         
-//        vc.phoneText = _phoneText.text ;
+        _agreementView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 60)];
+        
+        UIButton * checkbtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        [checkbtn setImage:[UIImage imageNamed:@"CheckNormal"] forState:UIControlStateNormal];
+        
+        [checkbtn setImage:[UIImage imageNamed:@"CheckedBlue"] forState:UIControlStateSelected];
+        
+        checkbtn.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 10);
+        
+        [checkbtn addTarget:self action:@selector(confirmAgreement) forControlEvents:UIControlEventTouchUpInside];
+        
+        checkbtn.frame = CGRectMake(15, 5, 30, 30);
+        
+        [_agreementView addSubview:checkbtn];
+        
+        _checkBT = checkbtn;
+        
+        UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake(40, 5, 200, 30)];
+        
+        label.font = [UIFont systemFontOfSize:16];
+        
+        label.textColor = [UIColor colorWithHexString:@"333333"];
+        
+        NSString * text = @"同意服务协议";
+        
+        NSDictionary *attribtDic = @{NSUnderlineStyleAttributeName: [NSNumber numberWithInteger:NSUnderlineStyleSingle]};
+        
+        NSMutableAttributedString *attribtStr = [[NSMutableAttributedString alloc]initWithString:text attributes:attribtDic];
+        
+        [attribtStr addAttribute:NSUnderlineColorAttributeName value:[UIColor colorWithHexString:@"333333"] range:(NSRange){0,[text length]}];
+        
+        UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(forwardAgreement)];
+        
+        label.userInteractionEnabled = YES ;
+        
+        [label addGestureRecognizer:tap];
+        
+        //赋值
+        label.attributedText = attribtStr;
+        
+        [_agreementView addSubview:label];
         
     }
-
-
+    
+    return _agreementView;
 }
-
 
 -(SPMainLoginBusiness *)buessiness{
 
@@ -135,9 +241,28 @@
         _buessiness = [[SPMainLoginBusiness alloc] init];
         
     }
-
     return _buessiness ;
 }
+
+-(NSMutableArray *)datas{
+    
+    if (!_datas) {
+        
+        NSArray * titles =  @[@"推荐人代码",@"推荐人姓名",@"申请人订单号",@"申请人姓名",@"身份证号码",@"手机号码",@"省市区",@"家庭地址"];
+        
+        _datas = [NSMutableArray arrayWithCapacity:0];
+        
+        for (int i = 0; i < titles.count; i++) {
+            
+            RegLocalModel * model = [[RegLocalModel alloc] init];
+            model.leftText = titles[i];
+            [_datas addObject:model];
+        }
+    }
+    
+    return _datas ;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

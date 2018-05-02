@@ -6,12 +6,11 @@
 //  Copyright © 2016年 SmartPurifieriOS. All rights reserved.
 //
 
-#import "JXChildViewController.h"
-
+#import "STChildViewController.h"
 
 /**
  注册
  */
-@interface SPRegisiterViewController : JXChildViewController
+@interface SPRegisiterViewController : STChildViewController
 
 @end

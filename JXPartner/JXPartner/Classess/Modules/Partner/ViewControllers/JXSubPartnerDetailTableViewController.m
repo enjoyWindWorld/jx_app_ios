@@ -39,6 +39,8 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
     
+    return 1;
+    
     if (_model) {
         
         if (_model.permissions == 0) {

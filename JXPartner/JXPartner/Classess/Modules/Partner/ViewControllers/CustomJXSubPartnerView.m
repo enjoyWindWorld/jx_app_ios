@@ -18,7 +18,7 @@
 
 - (NSArray<NSString *> *)titles {
     //全部 未付款 已付款 已绑定 未续费 已续费
-    return @[@"直接下属",@"间接下属"];
+    return @[@"直接成员",@"间接成员"];
 }
 
 - (instancetype)init {

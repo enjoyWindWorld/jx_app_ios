@@ -16,6 +16,8 @@
 #import "SPLoginElectricityEntrance.h"
 #import "SPUserModel.h"
 #import "SPBaseNetWorkRequst.h"
+#import "JFAreaDataManager.h"
+
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
 #import <UserNotifications/UserNotifications.h>
@@ -43,6 +45,9 @@ static const CGFloat kDefaultPlaySoundInterval = 5.0;
     [[NSUserDefaults standardUserDefaults] initWithSuiteName:@"com.jingxismart.jxpartner"];
     
     application.applicationIconBadgeNumber = 0 ;
+    
+    [[JFAreaDataManager shareManager] areaSqliteDBData];
+
     
     [self UmengShake];
 

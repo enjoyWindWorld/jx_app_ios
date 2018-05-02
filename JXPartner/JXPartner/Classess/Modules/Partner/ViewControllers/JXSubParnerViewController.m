@@ -56,7 +56,7 @@
     
     self.tableView.tableFooterView = [UIView new];
     
-    self.title = @"我的下属";
+    self.title = @"我的e家";
 }
 
 -(void)requestSubparnernList:(NSInteger)page{
