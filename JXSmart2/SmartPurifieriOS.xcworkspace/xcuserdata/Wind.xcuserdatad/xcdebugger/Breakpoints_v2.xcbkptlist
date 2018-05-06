@@ -31,8 +31,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
             endingLineNumber = "22"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
+            landmarkName = "SPUserChangeAddressViewController()"
+            landmarkType = "2">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartPurifieriOS/Classess/Modules/HomePage/ViewControllers/SPHomeDetailViewController.m"
-            timestampString = "501951212.996522"
+            timestampString = "547053809.889325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "313"
@@ -132,7 +132,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartPurifieriOS/Classess/Modules/HomePage/ViewControllers/SPHomeDetailViewController.m"
-            timestampString = "501951212.996522"
+            timestampString = "547053809.889478"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "267"

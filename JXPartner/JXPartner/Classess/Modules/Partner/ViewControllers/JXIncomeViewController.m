@@ -124,8 +124,7 @@
             NSDictionary * dic = result ;
             
             CGFloat money  = [dic[myTotalIncome] floatValue];
-                        
-            weakself.orderNO = money == 0 ? nil : dic[DRAWAL_ORDERNO_KEY];
+            
             weakself.incomeMoneyLabel.text = [NSString stringWithFormat:@"￥%.2f元",money];
             
             money  = [dic[my_balance] floatValue];
@@ -133,6 +132,7 @@
            
             money  = [dic[myWithdrawalLimit] floatValue];
             weakself.myIncomeLimitlabel.text = [NSString stringWithFormat:@"￥%.2f元",money];
+             weakself.orderNO = money == 0 ? nil : dic[DRAWAL_ORDERNO_KEY];
             
         }else{
         

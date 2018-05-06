@@ -71,19 +71,7 @@
             
             
             
-            NSDictionary *location =@{@"City":city,@"subLocality":subLocality};
-            
-            static dispatch_once_t onceToken;
-            dispatch_once(&onceToken, ^{
-                if (self.delegate && [self.delegate respondsToSelector:@selector(currentLocation:)]) {
-                    
-                    [KCURRENTCITYINFODEFAULTS  setObject:@(placemark.location.coordinate.latitude) forKey:CPMMUNITYlatitude];
-                    [KCURRENTCITYINFODEFAULTS setObject:@(placemark.location.coordinate.longitude) forKey:CPMMUNITYlongitude];
-                    [KCURRENTCITYINFODEFAULTS synchronize];
-                    
-                    [self.delegate currentLocation:location];
-                }
-            });
+           
         }
     }];
     [manager stopUpdatingLocation];

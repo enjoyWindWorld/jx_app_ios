@@ -307,7 +307,7 @@ NSString * const itemNewSubContent = @"itemSubContent";
         [self.productDesc show];
     }else{
     
-        RxWebViewController * web = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@",SmartPurifierHostURL,productDetailDespuRL]]];
+        RxWebViewController * web = [[RxWebViewController alloc] initWithUrl:[NSURL URLWithString:@"http://www.szjxzn.tech:8080/jx/pdf/promise.pdf"]];
         
         [self.navigationController pushViewController:web animated:YES];
     }

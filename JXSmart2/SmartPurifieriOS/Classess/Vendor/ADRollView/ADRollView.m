@@ -203,24 +203,13 @@
 //    self.currentView.backgroundColor =[ UIColor redColor];
     //此处是类型按钮(不需要点击)
     self.currentBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.currentBtn.frame = CGRectMake(5, (self.currentView.frame.size.height-35)/2, self.currentView.width*0.3, self.currentView.height);
+    self.currentBtn.frame = CGRectMake(-10, (self.currentView.frame.size.height-35)/2, self.currentView.width*0.3, self.currentView.height);
     [self.currentBtn setTitle:model.noticeType forState:UIControlStateNormal];
     [self.currentBtn setTitleColor:[UIColor colorWithHexString:@"F49F28" alpha:1.0] forState:UIControlStateNormal];
     self.currentBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     self.currentBtn.titleLabel.textAlignment = NSTextAlignmentLeft;
     [self.currentView addSubview:self.currentBtn];
     
-    //时间
-//    self.currentTimeLabel = [[UILabel alloc] init];
-//    self.currentTimeLabel.textColor = [UIColor colorWithHexString:@"666666" alpha:1.0];
-//    self.currentTimeLabel.font = [UIFont systemFontOfSize:12];
-//    self.currentTimeLabel.textAlignment = NSTextAlignmentRight;
-//    [self.currentView addSubview:self.currentTimeLabel];
-//    [self.currentTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerY.equalTo(self.currentBtn.mas_centerY);
-//        make.right.equalTo(self.currentView.mas_right).offset(-10);
-//        make.width.mas_equalTo(@70);
-//    }];
     
     //内容标题
     self.currentLabel = [[UILabel alloc]init];
@@ -245,23 +234,13 @@
     
     //此处是类型按钮(不需要点击)
     self.hidenBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.hidenBtn.frame = CGRectMake(5, (self.currentView.frame.size.height-35)/2, self.hidenView.width*0.3, self.hidenView.height);
+    self.hidenBtn.frame = CGRectMake(-10, (self.currentView.frame.size.height-35)/2, self.hidenView.width*0.3, self.hidenView.height);
     [self.hidenBtn setTitle:@"" forState:UIControlStateNormal];
     [self.hidenBtn setTitleColor:[UIColor colorWithHexString:@"F49F28" alpha:1.0] forState:UIControlStateNormal];
     self.hidenBtn.titleLabel.font = [UIFont systemFontOfSize:15];
     self.hidenBtn.titleLabel.textAlignment = NSTextAlignmentLeft;
     [self.hidenView addSubview:self.hidenBtn];
     
-//    self.hidenTimeLabel = [[UILabel alloc] init];
-//    self.hidenTimeLabel.textColor = [UIColor colorWithHexString:@"666666" alpha:1.0];
-//    self.hidenTimeLabel.font = [UIFont systemFontOfSize:12];
-//    self.hidenTimeLabel.textAlignment = NSTextAlignmentRight;
-//    [self.hidenView addSubview:self.hidenTimeLabel];
-//    [self.hidenTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerY.equalTo(self.hidenBtn.mas_centerY);
-//        make.right.equalTo(self.hidenView.mas_right).offset(-10);
-//        make.width.mas_equalTo(@70);
-//    }];
     
     //内容标题
     self.hidenLabel = [[UILabel alloc]init];

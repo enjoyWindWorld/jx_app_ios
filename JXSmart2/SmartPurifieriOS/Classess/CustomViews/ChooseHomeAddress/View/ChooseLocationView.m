@@ -330,10 +330,13 @@ static  CGFloat  const  kHYTopTabbarHeight = 30; //地址标签栏的高度
     NSMutableArray * addressArr = [[NSMutableArray alloc] init];
     
     for (UIButton * btn  in self.topTabbarItems) {
+        
+        NSString * title = btn.currentTitle;
+        
         if ([btn.currentTitle isEqualToString:@"县"] || [btn.currentTitle isEqualToString:@"市辖区"] ) {
-            continue;
+            title = @"";
         }
-        [addressArr addObject:btn.currentTitle];
+        [addressArr addObject:title];
 
     }
 //    self.address = addressStr;
