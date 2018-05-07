@@ -26,7 +26,11 @@
     
     _group_number.text = [NSString stringWithFormat:@"x%ld",model.number];
     
-    _group_cost_ppdnum.text = model.yearsorflow;
+    NSString * yearsorflow  =model.yearsorflow ;
+    
+    yearsorflow = [yearsorflow stringByReplacingOccurrencesOfString:@"包年购买" withString:@"服务费包年购买"];
+    
+    _group_cost_ppdnum.text = yearsorflow;
     
     _group_price.text = [NSString stringWithFormat:@"￥%.2f元",model.totalPrice];
 }

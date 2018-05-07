@@ -27,7 +27,7 @@
 #define MANAGEIDPLACEHOLDER @"输入产品经理编号";
 #define CHOOSETIMEPLACEHOLDER @"选择安装时间";
 
-#define FOOTERCELLCOUNT 2
+#define FOOTERCELLCOUNT 1
 
 @interface JXWritePayViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 
@@ -280,7 +280,8 @@
         
         NSString * allcount = [NSString stringWithFormat:@"%ld",[self fetchAllProductList]];
         
-        NSString * valuestr = indexPath.item==self.productListArr.count?[NSString stringWithFormat:@"共包含履约金:%@元",allple]:[NSString stringWithFormat:@"共%@台设备",allcount];
+//        NSString * valuestr = indexPath.item==self.productListArr.count?[NSString stringWithFormat:@"共包含履约金:%@元",allple]:[NSString stringWithFormat:@"共%@台设备",allcount];
+        NSString * valuestr = [NSString stringWithFormat:@"共%@台设备",allcount];
         
         NSMutableAttributedString * attstr = [[NSMutableAttributedString alloc] initWithString:valuestr];
         

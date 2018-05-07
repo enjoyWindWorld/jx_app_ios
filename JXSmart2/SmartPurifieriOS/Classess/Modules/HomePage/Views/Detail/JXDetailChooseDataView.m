@@ -239,6 +239,8 @@
         
         cell.numberBtn.isTouch = model.isSelect;
         
+        cell.numberBtn.editing = NO ;
+        
         cell.numberBtn.currentNumber = 1;
 
         cell.selectBtn.selected = model.isSelect;

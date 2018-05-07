@@ -517,6 +517,14 @@
     
     return @"1";
 }
+#pragma mark - 获得是否有优惠
+-(BOOL)fetchISDeal{
+    
+    BOOL isDeal = YES ;
+    
+    return isDeal ;
+}
+
 
 /**
  更改支付类别
@@ -551,6 +559,12 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
 
     if (section==0) {
+        
+        BOOL isDeal = [self fetchISDeal] ;
+        
+        if (isDeal) {
+            return 2 ;
+        }
         
         return 1;
     }

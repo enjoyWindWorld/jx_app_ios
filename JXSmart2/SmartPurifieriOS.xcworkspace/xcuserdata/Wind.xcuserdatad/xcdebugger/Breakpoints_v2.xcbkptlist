@@ -41,13 +41,13 @@
                   symbolName = "-[SPUserChangeAddressViewController phoneTextField]"
                   moduleName = "SmartPurifieriOS"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Wind/Documents/linuxSVN/newVersion/SmartPurifieriOS/Classess/Modules/User/ViewControllers/SPUserChangeAddressViewController.m"
-                  timestampString = "519991139.44339"
+                  urlString = "file:///Users/Wind/Documents/jx_app_ios/JXSmart2/SmartPurifieriOS/Classess/Modules/User/ViewControllers/SPUserChangeAddressViewController.m"
+                  timestampString = "547396426.763062"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
                   endingLineNumber = "23"
-                  offsetFromSymbolStart = "20">
+                  offsetFromSymbolStart = "16">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -56,13 +56,13 @@
                   symbolName = "-[SPUserChangeAddressViewController setPhoneTextField:]"
                   moduleName = "SmartPurifieriOS"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Wind/Documents/linuxSVN/newVersion/SmartPurifieriOS/Classess/Modules/User/ViewControllers/SPUserChangeAddressViewController.m"
-                  timestampString = "519991139.445845"
+                  urlString = "file:///Users/Wind/Documents/jx_app_ios/JXSmart2/SmartPurifieriOS/Classess/Modules/User/ViewControllers/SPUserChangeAddressViewController.m"
+                  timestampString = "547396426.767639"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
                   endingLineNumber = "23"
-                  offsetFromSymbolStart = "64">
+                  offsetFromSymbolStart = "49">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -280,6 +280,54 @@
             startingLineNumber = "194"
             endingLineNumber = "194"
             landmarkName = "-requestAddPubContent"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartPurifieriOS/Classess/Modules/CommunityService/communityController/CommunityViewController.m"
+            timestampString = "547396426.409037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "-initPushBtnNetWork"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartPurifieriOS/Classess/Modules/CommunityService/communityController/CommunityViewController.m"
+            timestampString = "547396426.40913"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "-initPushBtnNetWork"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartPurifieriOS/Classess/Modules/CommunityService/communityController/CommunityViewController.m"
+            timestampString = "547396426.409189"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -12,7 +12,7 @@
 
 -(NSString*)fetchPayTypeName{
 
-    return self.paytype==0?@"包年购买":@"流量购买";
+    return self.paytype==0?@"服务费":@"流量购买";
 }
 
 @end

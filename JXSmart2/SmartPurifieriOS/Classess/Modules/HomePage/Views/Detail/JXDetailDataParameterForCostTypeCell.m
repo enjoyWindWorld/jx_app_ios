@@ -20,6 +20,7 @@
     
     
     _numberBtn.maxValue = 3;
+    _numberBtn.editing = YES ;
     // Initialization code
 }
 
