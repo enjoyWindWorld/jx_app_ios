@@ -44,7 +44,12 @@
         
         _priceLabel.text = [NSString stringWithFormat:@"￥%.2f",itemModel.totalPrice];
         
-        _costTypeLabel.text = itemModel.yearsorflow;
+        NSString * yearsorflow  = itemModel.yearsorflow ;
+        
+        yearsorflow = [yearsorflow stringByReplacingOccurrencesOfString:@"包年购买" withString:@"服务费包年购买"];
+        
+        
+        _costTypeLabel.text = yearsorflow;
     }
     
     
