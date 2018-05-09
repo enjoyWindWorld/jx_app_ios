@@ -70,6 +70,9 @@
 
 - (IBAction)regAction:(id)sender {
     
+    [self.view endEditing:YES];
+    
+    
     for (RegLocalModel * mdoel in self.datas) {
         
         if (mdoel.rightContent.length == 0) {
@@ -94,6 +97,7 @@
     dic[@"ord_no"] = ((RegLocalModel*)self.datas[2]).rightContent;
     dic[@"nameApplicant"] = ((RegLocalModel*)self.datas[3]).rightContent;
     dic[@"cardNumber"] = ((RegLocalModel*)self.datas[4]).rightContent;
+    dic[@"mobilePhone"] = ((RegLocalModel*)self.datas[5]).rightContent;
     dic[@"s_province"] = self.localArr[0];
     dic[@"s_city"] = self.localArr[1];
     dic[@"s_county"] = self.localArr[2];
