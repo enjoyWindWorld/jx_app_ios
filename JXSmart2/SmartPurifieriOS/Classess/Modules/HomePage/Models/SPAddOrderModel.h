@@ -18,6 +18,7 @@
 @property (nonatomic, copy) NSString *context;
 @property (nonatomic,copy)  NSString * tag ;
 @property (nonatomic,assign) NSInteger paytype ;
+@property (nonatomic,assign) CGFloat pay_price ; //优惠金额
 
 @property (nonatomic,assign) SPAddorder_Type type ;
 

@@ -152,7 +152,7 @@
         
         SPProducePayTypePriceModel * model = obj;
         
-        NSString* price  = model.price;
+        NSString* price  = model.pay_price;
         
         [newpriceArr addObject:price];
         
@@ -176,10 +176,19 @@
     NSMutableAttributedString * string = [[NSMutableAttributedString alloc] initWithString:valuestring];
     
     NSDictionary *attributeDict =[NSDictionary dictionaryWithObjectsAndKeys:
-                                  [UIFont systemFontOfSize:20], NSFontAttributeName,
+                                  [UIFont systemFontOfSize:18], NSFontAttributeName,
                                   nil];
     
     [string addAttributes:attributeDict range:[valuestring rangeOfString:@"￥"]];
+    
+    NSMutableAttributedString * astring = [[NSMutableAttributedString alloc] initWithString:@"(三年服务费)"];
+    
+    attributeDict =[NSDictionary dictionaryWithObjectsAndKeys:
+                                  [UIFont systemFontOfSize:15], NSFontAttributeName,
+                                  nil];
+    
+    [astring addAttributes:attributeDict range:[valuestring rangeOfString:@"(三年服务费)"]];
+    [string appendAttributedString:astring ];
     
     _priceLabel.attributedText = string;
     

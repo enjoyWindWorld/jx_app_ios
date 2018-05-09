@@ -460,9 +460,9 @@
          
             _costtype = model.paytype;
             
-            _price = model.price;
+            _price = model.pay_price;
             
-             _priceLabel.text = [NSString stringWithFormat:@"￥%@",model.price];
+             _priceLabel.text = [NSString stringWithFormat:@"￥%@",model.pay_price];
             
             *stop = YES;
         }
@@ -497,6 +497,8 @@
         _ico  = [[UIImageView alloc] initWithFrame:CGRectMake(15, -25, PRODUCTICOHEIGHT, PRODUCTICOHEIGHT)];
         
         _ico.backgroundColor = [UIColor whiteColor];
+        
+        _ico.contentMode = UIViewContentModeScaleAspectFit ;
         
         _ico.layer.masksToBounds = YES;
         

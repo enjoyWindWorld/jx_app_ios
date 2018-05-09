@@ -338,7 +338,7 @@
         
         if (m.isagain==SPAddorder_Type_PAY) {
             
-            detailString = m.paytype==ClarifierCostType_YearFree?[NSString stringWithFormat:@"包年费用:%.2f",m.price]:[NSString stringWithFormat:@"流量预付:%.2f",m.price];
+            detailString = m.paytype==ClarifierCostType_YearFree?[NSString stringWithFormat:@"服务费包年费用:%.2f",m.price]:[NSString stringWithFormat:@"流量预付:%.2f",m.price];
         }else if (m.isagain==SPAddorder_Type_Renewal){
         
             detailString = m.paytype==ClarifierCostType_YearFree?[NSString stringWithFormat:@"包年续费:%.2f",m.price]:[NSString stringWithFormat:@"流量续费:%.2f",m.price];

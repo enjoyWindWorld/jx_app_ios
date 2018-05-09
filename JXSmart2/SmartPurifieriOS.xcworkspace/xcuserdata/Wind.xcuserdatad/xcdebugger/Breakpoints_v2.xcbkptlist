@@ -42,7 +42,7 @@
                   moduleName = "SmartPurifieriOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Wind/Documents/jx_app_ios/JXSmart2/SmartPurifieriOS/Classess/Modules/User/ViewControllers/SPUserChangeAddressViewController.m"
-                  timestampString = "547396426.763062"
+                  timestampString = "547569514.996805"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -57,7 +57,7 @@
                   moduleName = "SmartPurifieriOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Wind/Documents/jx_app_ios/JXSmart2/SmartPurifieriOS/Classess/Modules/User/ViewControllers/SPUserChangeAddressViewController.m"
-                  timestampString = "547396426.767639"
+                  timestampString = "547569515.000751"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -328,6 +328,22 @@
             startingLineNumber = "275"
             endingLineNumber = "275"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SmartPurifieriOS/Classess/Modules/HomePage/ViewControllers/SPGoPayDetailViewController.m"
+            timestampString = "547574769.6404361"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "648"
+            endingLineNumber = "648"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

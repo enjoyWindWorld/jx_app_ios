@@ -333,9 +333,9 @@ static  CGFloat  const  kHYTopTabbarHeight = 30; //地址标签栏的高度
         
         NSString * title = btn.currentTitle;
         
-        if ([btn.currentTitle isEqualToString:@"县"] || [btn.currentTitle isEqualToString:@"市辖区"] ) {
-            title = @"";
-        }
+//        if ([btn.currentTitle isEqualToString:@"县"] || [btn.currentTitle isEqualToString:@"市辖区"] ) {
+//            title = @"";
+//        }
         [addressArr addObject:title];
 
     }

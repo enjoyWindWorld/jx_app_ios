@@ -108,9 +108,22 @@
     
     [self.buessiness requestUserRegister:dic success:^(id result) {
         
-        [weakslef showSuccessWithStatus:@"注册成功"];
+        NSDictionary * dic = [result firstObject] ;
         
-        [weakslef.navigationController popToRootViewControllerAnimated:YES];
+        NSString * message = [NSString stringWithFormat:@"您的账号是:%@\n您的初始密码是:%@\n建议及时修改密码",dic[@"id"],@"123456"];
+
+        UIAlertController * ale = [UIAlertController alertControllerWithTitle:@"注册成功" message:message preferredStyle:UIAlertControllerStyleAlert];
+        
+        
+        UIAlertAction * act = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            [weakslef.navigationController popToRootViewControllerAnimated:YES];
+
+        }];
+        
+        [ale addAction:act];
+        
+        [weakslef presentViewController:ale animated:YES completion:nil];
         
     } failer:^(id error) {
         
@@ -181,7 +194,7 @@
 #pragma mark - 前往服务协议
 -(void)forwardAgreement{
     
-    NSURL * url = [NSURL URLWithString:@"http://www.szjxzn.tech:8080/old_jx/pdf/agreement.pdf"];
+    NSURL * url = [NSURL URLWithString:@"http://www.szjxzn.tech:8080/jx/pdf/partneragreement.pdf"];
     
     SPAgreetmentWebViewController* webViewController = [[SPAgreetmentWebViewController alloc] initWithUrl:url];
     

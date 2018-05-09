@@ -42,6 +42,8 @@
 @property (nonatomic,strong) SPComServiceModulesBusiness * communityBusiness ;
 
 @property (nonatomic,strong) SPHomePageBusiness * homepageBusiness ;
+@property (weak, nonatomic) IBOutlet UIButton *confirmPayBtn;
+
 
 @end
 
@@ -435,11 +437,29 @@
 
     if ([SPUserModel getUserLoginModel]&&[[SPUserModel getUserLoginModel].userid isEqualToString:JX_TEST_USER_ID]) {
         
+        [_confirmPayBtn setTitle:@"确认支付 :￥0" forState:UIControlStateNormal];
         return @"0";
     }
-    if (_orderModel)    return [NSString stringWithFormat:@"%.2f",_orderModel.price];
+    if (_orderModel) {
+        
+        
+        [_confirmPayBtn setTitle:[NSString stringWithFormat:@"确认支付 :￥%.2f",_orderModel.price] forState:UIControlStateNormal];
+
+         return [NSString stringWithFormat:@"%.2f",_orderModel.price + [self fetchDealMoney]];
+        
+    }
     
-    if (_writePayModel) return _writePayModel.price;
+    if (_writePayModel) {
+        
+        CGFloat price = [_writePayModel.price doubleValue];
+        
+        CGFloat pay_price = [self fetchDealMoney];
+       [_confirmPayBtn setTitle:[NSString stringWithFormat:@"确认支付 :￥%.2f",price] forState:UIControlStateNormal];
+
+        
+        return [NSString stringWithFormat:@"%.2f",(price + pay_price)] ;
+        
+    }
     
     if (_communityPay) {
         
@@ -520,9 +540,30 @@
 #pragma mark - 获得是否有优惠
 -(BOOL)fetchISDeal{
     
-    BOOL isDeal = YES ;
+    if (_writePayModel) {
+        
+        return _writePayModel.pay_price == 0 ? NO : YES ;
+    }
     
-    return isDeal ;
+    if (_orderModel) {
+        
+        return _orderModel.pay_price == 0 ? NO : YES ;
+    }
+    
+    return NO ;
+}
+
+-(CGFloat)fetchDealMoney{
+    if (_writePayModel) {
+        
+        return _writePayModel.pay_price ;
+    }
+    
+    if (_orderModel) {
+        
+        return _orderModel.pay_price ;
+    }
+    return 0.f;
 }
 
 
@@ -586,6 +627,15 @@
             return cell;
         }else{
         
+            if (indexPath.section == 0 && indexPath.row == 1) {
+                
+                cell.PayDetailLabel.text =@"优惠:";
+                cell.payCostLabel.text = [NSString stringWithFormat:@"¥ %.2f",[self fetchDealMoney]];
+                
+                return cell ;
+            }
+            
+            
             if ([[self getpayisAgain] integerValue]==SPAddorder_Type_PAY) {
                 
                 cell.PayDetailLabel.text = indexPath.section==0?[self getpayType]==ClarifierCostType_YearFree?@"总支付金额":@"总支付金额":@"请选择支付方式";

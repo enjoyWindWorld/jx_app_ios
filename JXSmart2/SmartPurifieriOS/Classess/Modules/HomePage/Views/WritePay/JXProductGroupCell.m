@@ -19,6 +19,9 @@
 -(void)setModel:(JXShoppingCarModel *)model
 {
     _model = model;
+    
+    self.group_ico.contentMode = UIViewContentModeScaleAspectFit ;
+
 
     [SPSDWebImage SPImageView:self.group_ico imageWithURL:model.url placeholderImage:[UIImage imageNamed:SPPRODUCTICOPLACEHOLDERImage]];
     

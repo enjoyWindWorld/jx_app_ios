@@ -17,6 +17,8 @@
 
 @property (nonatomic,copy) NSString * pay_pledge ; //履约金
 
+@property (nonatomic,copy) NSString * pay_price ;
+
 @property (nonatomic,assign) BOOL isSelect ;
 
 -(NSString*)fetchPayTypeName;

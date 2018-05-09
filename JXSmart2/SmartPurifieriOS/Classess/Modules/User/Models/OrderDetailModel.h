@@ -40,6 +40,7 @@
 @property (nonatomic,strong) NSArray * priceArr ;
 
 @property (nonatomic,copy) NSString * tag ;
+@property (nonatomic,assign) CGFloat pay_price ;
 
 
 @property (nonatomic,copy) NSString * ord_modtime ;
