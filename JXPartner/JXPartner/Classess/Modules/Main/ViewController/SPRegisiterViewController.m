@@ -13,7 +13,7 @@
 #import "RegTableViewCell.h"
 #import "RxWebViewController.h"
 #import "RegLocalModel.h"
-@interface SPRegisiterViewController ()<UITableViewDelegate,UITableViewDataSource,JXRegTableViewCellTableViewCellDelegate>
+@interface SPRegisiterViewController ()<UITableViewDelegate,UITableViewDataSource,JXRegTableViewCellTableViewCellDelegate,UINavigationControllerDelegate>
 
 @property(nonatomic,strong) SPMainLoginBusiness * buessiness;
 
@@ -51,7 +51,13 @@
     
     // Do any additional setup after loading the view.
 }
-
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    //控制器即将进入的时候调用
+    
+}
 
 /**
  视图返回
@@ -74,6 +80,13 @@
         }
     }
     
+    if (!_checkBT.isSelected) {
+        
+        [self makeToast:@"请前往阅读服务协议并同意"];
+        return ;
+    }
+    
+    
     NSMutableDictionary * dic = [NSMutableDictionary dictionary];
     dic[@"RecommenderCode"] = ((RegLocalModel*)self.datas[0]).rightContent;
     dic[@"NameReferee"] = ((RegLocalModel*)self.datas[1]).rightContent;
@@ -86,10 +99,20 @@
     dic[@"s_county"] = self.localArr[2];
     dic[@"homeAddress"] = ((RegLocalModel*)self.datas[7]).rightContent;
     
+     __weak typeof(self) weakslef = self ;
+    [self showWithStatus:@"正在请求中..."];
     
     [self.buessiness requestUserRegister:dic success:^(id result) {
         
+        [weakslef showSuccessWithStatus:@"注册成功"];
+        
+        [weakslef.navigationController popToRootViewControllerAnimated:YES];
+        
     } failer:^(id error) {
+        
+        [UIViewController dismiss];
+        
+        [weakslef makeToast:error];
         
     }];
     
@@ -233,6 +256,8 @@
     
     return _agreementView;
 }
+
+
 
 -(SPMainLoginBusiness *)buessiness{
 

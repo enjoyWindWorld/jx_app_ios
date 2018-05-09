@@ -125,10 +125,10 @@
 //    [[self class]stringReaplaceEmojiAndNewlineCharacterSet];
     
     //       缓存策略
-    //     1.先判断哪些url加载缓存ss
+    //     1.先判断哪些url加载缓存
     //     2.判断有没有网络
     //     3.如果没有网络则返回 NO
-    //     4.有网，则继续请求，然后刷新内容，刷新缓存
+    //     4.有网，则继续请求，读取缓存 然后刷新内容，刷新缓存
     
 
     if ([QSHCache qsh_ReadCacheforParam:dic url:url successBlock:didSuccessBlock]) {

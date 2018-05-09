@@ -75,6 +75,7 @@
     
     SPUserModel * model = [SPUserModel fetchPartnerModelDF];
     
+    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     
     if (model) {
