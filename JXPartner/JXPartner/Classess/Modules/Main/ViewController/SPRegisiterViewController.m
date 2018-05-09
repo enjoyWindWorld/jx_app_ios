@@ -110,7 +110,7 @@
         
         NSDictionary * dic = [result firstObject] ;
         
-        NSString * message = [NSString stringWithFormat:@"您的账号是:%@\n您的初始密码是:%@\n建议及时修改密码",dic[@"id"],@"123456"];
+        NSString * message = [NSString stringWithFormat:@"您的账号是:%@\n您的初始密码是:%@\n建议及时保存和修改密码",dic[@"id"],@"123456"];
 
         UIAlertController * ale = [UIAlertController alertControllerWithTitle:@"注册成功" message:message preferredStyle:UIAlertControllerStyleAlert];
         
