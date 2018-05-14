@@ -340,6 +340,28 @@
 
 }
 
++(void)newStartNetRequestWithTypeMethod:(RequestMethod)typeMethod
+                   isNeedUserIdentifier:(BOOL)userIdentifier
+                               didParam:(id)param
+                                 didUrl:(NSString*)url
+                             didSuccess:(RequestSuccessBlock)didSuccessBlock
+                              didFailed:(RequestFailureBlock)didFailereBlock{
+    
+    
+    SPBaseNetWorkRequst * requet = [SPBaseNetWorkRequst shareRequst];
+    
+    [requet.engine POST:@"http://www.baidu.com" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        
+        [SPBaseResponseHandler successHandlerWithSessionDataTask:task responseObject:responseObject successHandler:didSuccessBlock errorHandler:didFailereBlock parameters:param];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        [SPBaseResponseHandler errorHandlerWithSessionDataTask:task error:error errorHandler:didFailereBlock parameters:param];
+        
+    }];
+    
+}
 
 
 /**

@@ -40,6 +40,14 @@
                      didFailed:(RequestFailureBlock)didFailereBlock;
 
 
++(void)newStartNetRequestWithTypeMethod:(RequestMethod)typeMethod
+                isNeedUserIdentifier:(BOOL)userIdentifier
+                            didParam:(id)param
+                              didUrl:(NSString*)url
+                          didSuccess:(RequestSuccessBlock)didSuccessBlock
+                           didFailed:(RequestFailureBlock)didFailereBlock;
+
+
 +(void)uploadWithImage:(UIImage*)image
                    url:(NSString *)url
               filename:(NSString *)filename

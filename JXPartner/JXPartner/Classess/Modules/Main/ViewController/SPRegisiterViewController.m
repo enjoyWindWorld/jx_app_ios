@@ -108,6 +108,8 @@
     
     [self.buessiness requestUserRegister:dic success:^(id result) {
         
+        [UIViewController dismiss];
+        
         NSDictionary * dic = [result firstObject] ;
         
         NSString * message = [NSString stringWithFormat:@"您的账号是:%@\n您的初始密码是:%@\n建议及时保存和修改密码",dic[@"id"],@"123456"];

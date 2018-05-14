@@ -22,11 +22,11 @@
 //服务器环境配置
 #if !defined SmartPurifierHostURL_For_Develop && !defined SmartPurifierHostURL_For_BetaTest && !defined SmartPurifierHostURL_For_Release
 
-#define SmartPurifierHostURL_For_Develop   //开发
+//#define SmartPurifierHostURL_For_Develop   //开发
 
 //#define SmartPurifierHostURL_For_BetaTest   //内测分发
 
-//#define SmartPurifierHostURL_For_Release    //线上 appleStorezvs
+#define SmartPurifierHostURL_For_Release    //线上 appleStorezvs
 
 #endif
 

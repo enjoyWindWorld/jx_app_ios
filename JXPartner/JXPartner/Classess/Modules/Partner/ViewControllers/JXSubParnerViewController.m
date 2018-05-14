@@ -96,7 +96,7 @@
             if (_tag == 0) {
                 
 
-                [modelArr addObject:@{SUBPARNER_NAME_KEY:@"名称",SUBPARNER_NAME_VALUE:model.par_name}];
+                [modelArr addObject:@{SUBPARNER_NAME_KEY:@"姓名",SUBPARNER_NAME_VALUE:model.par_name}];
                 
                 [modelArr addObject:@{SUBPARNER_NAME_KEY:@"编号",SUBPARNER_NAME_VALUE:model.par_id}];
                 
@@ -105,15 +105,15 @@
             }else{
 
                 
-                [modelArr addObject:@{SUBPARNER_NAME_KEY:@"名称",SUBPARNER_NAME_VALUE:model.par_name}];
+                [modelArr addObject:@{SUBPARNER_NAME_KEY:@"姓名",SUBPARNER_NAME_VALUE:model.par_name}];
                 
                 [modelArr addObject:@{SUBPARNER_NAME_KEY:@"编号",SUBPARNER_NAME_VALUE:model.par_id}];
                 
                 [modelArr addObject:@{SUBPARNER_NAME_KEY:@"级别",SUBPARNER_NAME_VALUE:[JXPartnerModulesMacro fetchParnerLevelString:model.par_level]}];
                 
-                [modelArr addObject:@{SUBPARNER_NAME_KEY:@"上级合伙人",SUBPARNER_NAME_VALUE:model.super_par_name}];
+                [modelArr addObject:@{SUBPARNER_NAME_KEY:@"所属直接成员",SUBPARNER_NAME_VALUE:model.super_par_name}];
                 
-                [modelArr addObject:@{SUBPARNER_NAME_KEY:@"上级合伙人编号",SUBPARNER_NAME_VALUE:model.super_id}];
+                [modelArr addObject:@{SUBPARNER_NAME_KEY:@"所属直接成员编号",SUBPARNER_NAME_VALUE:model.super_id}];
 
             }
             

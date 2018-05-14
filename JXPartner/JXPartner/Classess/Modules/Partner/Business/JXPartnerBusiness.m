@@ -69,7 +69,9 @@
                     succcess:(BusinessSuccessBlock)success
                      failere:(BusinessFailureBlock)failere{
     
-    [SPBaseNetWorkRequst  startNetRequestWithTypeMethod:RequestMethod_POST isNeedUserIdentifier:NO didParam:param didUrl:HomePageNewsList didSuccess:^(id response) {
+    NSString * url =[NSString stringWithFormat:@"%@:%@/%@/%@",SmartPurifierHostURL,@"8080",@"jx_smart",HomePageNewsList];
+    
+    [SPBaseNetWorkRequst  startNetRequestWithTypeMethod:RequestMethod_POST isNeedUserIdentifier:NO didParam:param didUrl:url didSuccess:^(id response) {
         
         if ([response isKindOfClass:[NSArray class]]) {
             
