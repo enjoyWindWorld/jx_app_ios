@@ -309,7 +309,7 @@
     // NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     __weak typeof(self) weakself = self;
     //@"type":@"2"   苹果
-    [SPBaseNetWorkRequst startNetRequestWithTypeMethod:RequestMethod_POST isNeedUserIdentifier:NO didParam:@{@"ver":@"5",@"type":@"2"} didUrl:@"smvc/launch/test/visit.v" didSuccess:^(id response) {
+    [SPBaseNetWorkRequst startNetRequestWithTypeMethod:RequestMethod_POST isNeedUserIdentifier:NO didParam:@{@"ver":@"6",@"type":@"2"} didUrl:@"smvc/launch/test/visit.v" didSuccess:^(id response) {
         
         if ([response isKindOfClass:[NSArray class]]) {
         
