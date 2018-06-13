@@ -180,11 +180,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartPurifieriOS/Classess/Modules/CommunityService/communityController/ReleaseViewController.m"
-            timestampString = "519991042.067965"
+            timestampString = "549701558.938773"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "524"
-            endingLineNumber = "524"
+            startingLineNumber = "528"
+            endingLineNumber = "528"
             landmarkName = "-privateContentIsInvalid"
             landmarkType = "7">
          </BreakpointContent>
@@ -196,11 +196,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartPurifieriOS/Classess/Modules/CommunityService/communityController/ReleaseViewController.m"
-            timestampString = "519991042.067965"
+            timestampString = "549701558.939178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "779"
-            endingLineNumber = "779">
+            startingLineNumber = "657"
+            endingLineNumber = "657">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -274,11 +274,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartPurifieriOS/Classess/Modules/CommunityService/communityController/ReleaseViewController.m"
-            timestampString = "519991101.819765"
+            timestampString = "549701558.9394751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
             landmarkName = "-requestAddPubContent"
             landmarkType = "7">
          </BreakpointContent>
@@ -338,7 +338,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartPurifieriOS/Classess/Modules/HomePage/ViewControllers/SPGoPayDetailViewController.m"
-            timestampString = "547582807.628443"
+            timestampString = "550340203.6421061"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "648"

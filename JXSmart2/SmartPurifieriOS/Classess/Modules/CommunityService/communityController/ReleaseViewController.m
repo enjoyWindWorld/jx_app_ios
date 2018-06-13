@@ -190,6 +190,10 @@
         latitude = @"0";
     }
     
+    if (!_class_promoteID) {
+        _class_promoteID = @"";
+    }
+    
     NSDictionary * dic = @{@"promoterid":_class_promoteID,@"phone":_class_telPhone,@"address":_class_address,@"sellername":_class_storeName,@"begintime":_class_startTime,@"endtime":_class_endTime,@"userName":_class_contactP,@"categoryid":_class_categoryid,@"content":_class_serviceContent,@"longitude":longitude,@"latitude":latitude};
     
     __weak typeof(self) weakself = self ;

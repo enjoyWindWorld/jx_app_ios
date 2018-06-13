@@ -445,7 +445,7 @@
         
         [_confirmPayBtn setTitle:[NSString stringWithFormat:@"确认支付 :￥%.2f",_orderModel.price] forState:UIControlStateNormal];
 
-         return [NSString stringWithFormat:@"%.2f",_orderModel.price + [self fetchDealMoney]];
+         return [NSString stringWithFormat:@"%.2f",_orderModel.price];
         
     }
     
@@ -457,7 +457,7 @@
        [_confirmPayBtn setTitle:[NSString stringWithFormat:@"确认支付 :￥%.2f",price] forState:UIControlStateNormal];
 
         
-        return [NSString stringWithFormat:@"%.2f",(price + pay_price)] ;
+        return [NSString stringWithFormat:@"%.2f",(price)] ;
         
     }
     
@@ -644,8 +644,8 @@
                 
                 cell.PayDetailLabel.text = indexPath.section==0?[self getpayType]==ClarifierCostType_YearFree?@"总支付金额":@"总支付金额":@"请选择支付方式";
             }
-            
-            cell.payCostLabel.text = indexPath.section==0?[NSString stringWithFormat:@"¥ %.2f",[[self getpayPrice] floatValue]]:@"";
+        
+            cell.payCostLabel.text = indexPath.section==0?[NSString stringWithFormat:@"¥ %.2f",[[self getpayPrice] floatValue] + [self fetchDealMoney]]:@"";
             
             return cell;
             
