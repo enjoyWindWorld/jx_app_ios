@@ -213,8 +213,12 @@
         
         [weakself getPeopleInfoation];
         
-        [GeTuiSdk bindAlias:model.partnerNumber andSequenceNum:model.partnerNumber];
-        
+        if (DEBUG) {
+            
+            [GeTuiSdk bindAlias:[NSString stringWithFormat:@"test_%@",model.partnerNumber] andSequenceNum:model.partnerNumber];
+        }else{
+         [GeTuiSdk bindAlias:model.partnerNumber andSequenceNum:model.partnerNumber];
+        }
         if (model.originalpassword) {
             
             NSLog(@"当前为默认密码");

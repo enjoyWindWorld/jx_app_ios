@@ -225,7 +225,7 @@
         
         vc.walletOrdersn = self.orderNO;
         
-        vc.defaultMoney = self.incomeMoneyLabel.text;
+        vc.defaultMoney = self.myIncomeLimitlabel.text;
     }
 
 }

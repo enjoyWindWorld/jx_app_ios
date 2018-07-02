@@ -25,7 +25,7 @@ typedef NS_ENUM(NSInteger,STATETYPE){
 - (void)showProgress:(float)progress status:(NSString*)status;
 - (void)showSuccessWithStatus:(NSString*)status;
 - (void)showErrorWithStatus:(NSString*)status;
-
+- (void)showDefaultWithStatus:(NSString*)status;
 
 -(void)makeToast:(NSString *)message
         duration:(NSTimeInterval)duration

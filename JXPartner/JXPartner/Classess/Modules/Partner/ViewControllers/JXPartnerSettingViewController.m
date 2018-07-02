@@ -52,7 +52,7 @@
         
         [UIImageView cleanImage];
         
-        [GeTuiSdk unbindAlias:model.partnerNumber andSequenceNum:model.partnerNumber andIsSelf:NO];
+        [GeTuiSdk unbindAlias:model.partnerNumber andSequenceNum:model.partnerNumber andIsSelf:false];
         
         [(AppDelegate*)[UIApplication sharedApplication].delegate setLoginVCWithRootViewController];
        

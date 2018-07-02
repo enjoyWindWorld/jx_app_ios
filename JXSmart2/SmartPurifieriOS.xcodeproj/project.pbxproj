@@ -452,6 +452,10 @@
 		A285BBFA1DDE90580007B4D1 /* SPPersonalSignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A285BBF91DDE90580007B4D1 /* SPPersonalSignatureViewController.m */; };
 		A285BBFE1DDE95EC0007B4D1 /* ChooseValuePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A285BBFD1DDE95EC0007B4D1 /* ChooseValuePickerView.m */; };
 		A285BC011DDE9F120007B4D1 /* SPPurifierModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A285BC001DDE9F120007B4D1 /* SPPurifierModel.m */; };
+		A28F1E8220E7B35800FA53D8 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A28F1E8020E7B35700FA53D8 /* NSDictionary+NilSafe.m */; };
+		A28F1E8C20E7B87E00FA53D8 /* detail_list-0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A28F1E8920E7B87700FA53D8 /* detail_list-0.jpg */; };
+		A28F1E8D20E7B87E00FA53D8 /* detail_list-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A28F1E8A20E7B87A00FA53D8 /* detail_list-1.jpg */; };
+		A28F1E8E20E7B87E00FA53D8 /* detail_list-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A28F1E8B20E7B87E00FA53D8 /* detail_list-2.jpg */; };
 		A28F8A831DDA1C1500C30899 /* GCPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A28F8A821DDA1C1500C30899 /* GCPlaceholderTextView.m */; };
 		A28F8A911DDA1CF800C30899 /* SPTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28F8A871DDA1CF800C30899 /* SPTabbarViewController.m */; };
 		A28F8A921DDA1CF800C30899 /* SPBaseNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28F8A891DDA1CF800C30899 /* SPBaseNavViewController.m */; };
@@ -1332,6 +1336,11 @@
 		A285BBFD1DDE95EC0007B4D1 /* ChooseValuePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseValuePickerView.m; sourceTree = "<group>"; };
 		A285BBFF1DDE9F120007B4D1 /* SPPurifierModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPurifierModel.h; sourceTree = "<group>"; };
 		A285BC001DDE9F120007B4D1 /* SPPurifierModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPurifierModel.m; sourceTree = "<group>"; };
+		A28F1E8020E7B35700FA53D8 /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
+		A28F1E8120E7B35800FA53D8 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
+		A28F1E8920E7B87700FA53D8 /* detail_list-0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "detail_list-0.jpg"; sourceTree = "<group>"; };
+		A28F1E8A20E7B87A00FA53D8 /* detail_list-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "detail_list-1.jpg"; sourceTree = "<group>"; };
+		A28F1E8B20E7B87E00FA53D8 /* detail_list-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "detail_list-2.jpg"; sourceTree = "<group>"; };
 		A28F8A811DDA1C1500C30899 /* GCPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPlaceholderTextView.h; sourceTree = "<group>"; };
 		A28F8A821DDA1C1500C30899 /* GCPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPlaceholderTextView.m; sourceTree = "<group>"; };
 		A28F8A861DDA1CF800C30899 /* SPTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTabbarViewController.h; sourceTree = "<group>"; };
@@ -2065,6 +2074,9 @@
 		5661E4A91DE42D9F002AD8FB /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				A28F1E8920E7B87700FA53D8 /* detail_list-0.jpg */,
+				A28F1E8B20E7B87E00FA53D8 /* detail_list-2.jpg */,
+				A28F1E8A20E7B87A00FA53D8 /* detail_list-1.jpg */,
 				1C0CB5E81DE45BC2008E2BF8 /* photo */,
 				565C353C1DE6967800EA6C4D /* Assets.xcassets */,
 				5661E4AB1DE42DD3002AD8FB /* Base.lproj */,
@@ -3063,6 +3075,8 @@
 		A2A2FA471DDA193E005EE87F /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				A28F1E8120E7B35800FA53D8 /* NSDictionary+NilSafe.h */,
+				A28F1E8020E7B35700FA53D8 /* NSDictionary+NilSafe.m */,
 				56DC97301ED67D1700B96CEE /* EdgeinsetsButton */,
 				56C4927C1ED5736E00542745 /* UIColor+Separate.h */,
 				56C4927D1ED5736E00542745 /* UIColor+Separate.m */,
@@ -3510,6 +3524,7 @@
 				563BD3C11E470A240055DBAD /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				563BD39F1E470A240055DBAD /* LICENSE in Resources */,
 				563223991EFB646F00A5C617 /* JXUserOrderItemTableViewCell.xib in Resources */,
+				A28F1E8E20E7B87E00FA53D8 /* detail_list-2.jpg in Resources */,
 				1C4537EF1DE52BC3007E7E44 /* address_samll@2x.png in Resources */,
 				A21288DD1DDD89D10029F203 /* SPUserServiceHeaderView.xib in Resources */,
 				56933ACA1F01F70300271515 /* JXCommunityDetailSectionHeader.xib in Resources */,
@@ -3556,6 +3571,7 @@
 				1C608B7A1DFBABF300C7E2EA /* bindingphone@3x.png in Resources */,
 				A2F7D1891DDBEC67009B4491 /* User.storyboard in Resources */,
 				1C608B7F1DFBACDB00C7E2EA /* NewPhoneViewController.xib in Resources */,
+				A28F1E8D20E7B87E00FA53D8 /* detail_list-1.jpg in Resources */,
 				56933AD41F020AF700271515 /* JXCommunityShopContentTableViewCell.xib in Resources */,
 				56FCC3C31F024B7C00CB8C2E /* JXCommunityInterviewBottomView.xib in Resources */,
 				1C7395EF1E111C0700F2CB05 /* GradientColor.png in Resources */,
@@ -3564,6 +3580,7 @@
 				1C0C90471DF4FA6B00F7A52B /* share-friend@2x.png in Resources */,
 				1C0C90461DF4FA6B00F7A52B /* share-back@2x.png in Resources */,
 				56DCAD501EE924E90006A99F /* JXWritePayAddressCell.xib in Resources */,
+				A28F1E8C20E7B87E00FA53D8 /* detail_list-0.jpg in Resources */,
 				1CFA0B091DE6BF0D00963C18 /* cleanDeitalNoImg@3x.png in Resources */,
 				565ECBD61DFFA2B10074441C /* rsa_public_key.pem in Resources */,
 				A200BE751EFE3C48003F234F /* JXCommunityTextTableViewCell.xib in Resources */,
@@ -3968,6 +3985,7 @@
 				5671048D1F04F30D00AB46D6 /* UIImageView+ZFCache.m in Sources */,
 				56DCAD4A1EE91E350006A99F /* JXWritePayChooseTimeCell.m in Sources */,
 				56E6D7101EC55EC7005F2891 /* JFCityTableViewCell.m in Sources */,
+				A28F1E8220E7B35800FA53D8 /* NSDictionary+NilSafe.m in Sources */,
 				56F519871F0602E600F0A792 /* JXNewsModel.m in Sources */,
 				5671049C1F04F54C00AB46D6 /* JXPlayerCollectionViewCell.m in Sources */,
 				A2E19AF01DE741E10032BEC6 /* SPUserModulesMacro.m in Sources */,
@@ -4242,7 +4260,7 @@
 					"-weak_framework",
 					"\"Photos\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jingxismart.smartpurifier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jingxismart.smartpurifier1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4347,7 +4365,7 @@
 					"-weak_framework",
 					"\"Photos\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jingxismart.smartpurifier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jingxismart.smartpurifier1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

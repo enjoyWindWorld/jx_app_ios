@@ -163,6 +163,7 @@
 		56DBCEB51F3C531800300BB6 /* JXMsgPlaySound.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DBCEB41F3C531800300BB6 /* JXMsgPlaySound.m */; };
 		56FB6C3F1FBEC63C00340D81 /* JXAfterFilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FB6C3D1FBEC63C00340D81 /* JXAfterFilterTableViewCell.m */; };
 		56FB6C401FBEC63C00340D81 /* JXAfterFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56FB6C3E1FBEC63C00340D81 /* JXAfterFilterTableViewCell.xib */; };
+		A25B069420DD4AF200B99319 /* NSDictionary+NilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = A25B069220DD4AF200B99319 /* NSDictionary+NilSafe.m */; };
 		A25ECA172099FCC1001F76EC /* RegTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA162099FCC1001F76EC /* RegTableViewCell.m */; };
 		A25ECA1A209A0033001F76EC /* RegLocalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA19209A0033001F76EC /* RegLocalModel.m */; };
 		A25ECA32209A0692001F76EC /* JFCityCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A25ECA1D209A0692001F76EC /* JFCityCollectionViewCell.m */; };
@@ -505,6 +506,8 @@
 		56FB6C3C1FBEC63C00340D81 /* JXAfterFilterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXAfterFilterTableViewCell.h; sourceTree = "<group>"; };
 		56FB6C3D1FBEC63C00340D81 /* JXAfterFilterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXAfterFilterTableViewCell.m; sourceTree = "<group>"; };
 		56FB6C3E1FBEC63C00340D81 /* JXAfterFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JXAfterFilterTableViewCell.xib; sourceTree = "<group>"; };
+		A25B069220DD4AF200B99319 /* NSDictionary+NilSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NilSafe.m"; sourceTree = "<group>"; };
+		A25B069320DD4AF200B99319 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
 		A25ECA152099FCC1001F76EC /* RegTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegTableViewCell.h; sourceTree = "<group>"; };
 		A25ECA162099FCC1001F76EC /* RegTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegTableViewCell.m; sourceTree = "<group>"; };
 		A25ECA18209A0033001F76EC /* RegLocalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegLocalModel.h; sourceTree = "<group>"; };
@@ -1218,6 +1221,8 @@
 		56DBCE6B1F3C29C600300BB6 /* OC_Category */ = {
 			isa = PBXGroup;
 			children = (
+				A25B069320DD4AF200B99319 /* NSDictionary+NilSafe.h */,
+				A25B069220DD4AF200B99319 /* NSDictionary+NilSafe.m */,
 				5697DD1D1F6290C300EE39BF /* UIView+MGBadgeView.h */,
 				5697DD1E1F6290C300EE39BF /* UIView+MGBadgeView.m */,
 				56DBCE701F3C29C600300BB6 /* NSString+Verification.h */,
@@ -1818,6 +1823,7 @@
 				56D04F0D1F3D40EC00D1EBED /* SPRegisiterViewController.m in Sources */,
 				56923F2B1F458DD1007937AE /* MyClarifierMessageTableViewCell.m in Sources */,
 				56D5F3EF1FBD74B000D6400B /* JXAfterListTableViewCell.m in Sources */,
+				A25B069420DD4AF200B99319 /* NSDictionary+NilSafe.m in Sources */,
 				56DBCE811F3C29C600300BB6 /* NSString+Verification.m in Sources */,
 				56A969371F5F9C3F00D39893 /* JXincomeDetailTableViewCell.m in Sources */,
 				569D223E1F4AAA3C0085F008 /* JXMessageModel.m in Sources */,

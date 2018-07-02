@@ -223,7 +223,7 @@ NSString * const itemNewSubContent = @"itemSubContent";
         return 0;
     }
 
-    return 1;
+    return 2;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -235,15 +235,41 @@ NSString * const itemNewSubContent = @"itemSubContent";
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    JXDetailChooseDataCell * cell = [tableView dequeueReusableCellWithIdentifier:@"JXDetailChooseDataCell"];
+    if (indexPath.section == 0) {
+        
+        JXDetailChooseDataCell * cell = [tableView dequeueReusableCellWithIdentifier:@"JXDetailChooseDataCell"];
+        
+        NSDictionary * dic = self.itemDataArr[indexPath.row];
+        
+        cell.nameDesc.text = dic[itemNewContent];
+        
+        NSString * imgname = indexPath.row==2?@"nav_back_right":@"more";
+        
+        [cell.descRight setImage:[UIImage imageNamed:imgname] forState:UIControlStateNormal];
+     
+        return cell ;
+    }
     
-    NSDictionary * dic = self.itemDataArr[indexPath.row];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"imagecell"] ;
     
-    cell.nameDesc.text = dic[itemNewContent];
+    if (!cell) {
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"imagecell"];
+        
+        CGFloat scale = 1080  / 2430;
+        
+        UIImageView * backimageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 852)];
+        backimageView.tag = 10001 ;
+        backimageView.contentMode = UIViewContentModeScaleAspectFit ;
+        [cell.contentView addSubview:backimageView];
+    }
     
-    NSString * imgname = indexPath.row==2?@"nav_back_right":@"more";
+    UIImageView * imageview = [cell.contentView viewWithTag:10001];\
     
-    [cell.descRight setImage:[UIImage imageNamed:imgname] forState:UIControlStateNormal];
+    NSString * imageName = [NSString stringWithFormat:@"detail_list-%ld.jpg",indexPath.row];
+    
+    imageview.image = [UIImage imageNamed:imageName];
+    
 
     return cell;
     
@@ -269,7 +295,11 @@ NSString * const itemNewSubContent = @"itemSubContent";
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    return 55.f;
+    CGFloat scale = 1080  / 2430;
+
+    return indexPath.section == 0 ? 55.f : 852;
+    
+//    return 55.f;
 }
 
 
@@ -289,7 +319,7 @@ NSString * const itemNewSubContent = @"itemSubContent";
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    if (!self.PurifierModel) {
+    if (!self.PurifierModel || indexPath.section == 1) {
         
         return ;
     }

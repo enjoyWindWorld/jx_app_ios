@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JXPartner/Classess/Modules/Partner/ViewControllers/JXIncomeViewController.m"
-            timestampString = "547311746.222677"
+            timestampString = "551977433.8493741"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "191"
@@ -224,6 +224,150 @@
             startingLineNumber = "74"
             endingLineNumber = "74"
             landmarkName = "-fetchHomePageNewsList:succcess:failere:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JXPartnerBusiness fetchHomePageNewsList:succcess:failere:]"
+                  moduleName = "JXPartner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Wind/Documents/jx_app_ios/JXPartner/JXPartner/Classess/Modules/Partner/Business/JXPartnerBusiness.m"
+                  timestampString = "552259246.194731"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "275">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__60-[JXPartnerBusiness fetchHomePageNewsList:succcess:failere:]_block_invoke"
+                  moduleName = "JXPartner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Wind/Documents/jx_app_ios/JXPartner/JXPartner/Classess/Modules/Partner/Business/JXPartnerBusiness.m"
+                  timestampString = "552259246.199653"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JXPartner/Classess/Util/Manager/NetWorkManager/SPBaseNetWorkRequst.m"
+            timestampString = "552149093.465772"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "330"
+            endingLineNumber = "330"
+            landmarkName = "+startRequestWithPost:didUrl:didSuccess:didFailed:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "+[SPBaseNetWorkRequst startRequestWithPost:didUrl:didSuccess:didFailed:]"
+                  moduleName = "JXPartner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Wind/Documents/jx_app_ios/JXPartner/JXPartner/Classess/Util/Manager/NetWorkManager/SPBaseNetWorkRequst.m"
+                  timestampString = "552259246.206329"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "330"
+                  endingLineNumber = "330"
+                  offsetFromSymbolStart = "198">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__72+[SPBaseNetWorkRequst startRequestWithPost:didUrl:didSuccess:didFailed:]_block_invoke"
+                  moduleName = "JXPartner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Wind/Documents/jx_app_ios/JXPartner/JXPartner/Classess/Util/Manager/NetWorkManager/SPBaseNetWorkRequst.m"
+                  timestampString = "552259246.2096601"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "330"
+                  endingLineNumber = "330"
+                  offsetFromSymbolStart = "17">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JXPartner/Classess/Modules/Partner/ViewControllers/JXNewIncomeTableViewController.m"
+            timestampString = "552260400.4067219"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "335"
+            endingLineNumber = "335"
+            landmarkName = "-requestAdultSubWithdrawal:reason:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JXNewIncomeTableViewController requestAdultSubWithdrawal:reason:]"
+                  moduleName = "JXPartner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Wind/Documents/jx_app_ios/JXPartner/JXPartner/Classess/Modules/Partner/ViewControllers/JXNewIncomeTableViewController.m"
+                  timestampString = "552259246.216166"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "335"
+                  endingLineNumber = "335"
+                  offsetFromSymbolStart = "138">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__67-[JXNewIncomeTableViewController requestAdultSubWithdrawal:reason:]_block_invoke"
+                  moduleName = "JXPartner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Wind/Documents/jx_app_ios/JXPartner/JXPartner/Classess/Modules/Partner/ViewControllers/JXNewIncomeTableViewController.m"
+                  timestampString = "552259246.219147"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "337"
+                  endingLineNumber = "337"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JXPartner/Classess/Modules/Partner/ViewControllers/JXNewIncomeTableViewController.m"
+            timestampString = "552260400.406828"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
+            landmarkName = "-requestAdultIncome"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

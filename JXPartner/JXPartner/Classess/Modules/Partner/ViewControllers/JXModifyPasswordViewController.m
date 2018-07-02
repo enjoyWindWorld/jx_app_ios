@@ -136,7 +136,7 @@
         
         [SPUserModel delCurrentPartnerModel];
         
-        [GeTuiSdk unbindAlias:model.partnerNumber andSequenceNum:model.partnerNumber andIsSelf:YES];
+        [GeTuiSdk unbindAlias:model.partnerNumber andSequenceNum:model.partnerNumber andIsSelf:false];
         
         [(AppDelegate*)[UIApplication sharedApplication].delegate setLoginVCWithRootViewController];
         

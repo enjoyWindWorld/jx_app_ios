@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartPurifieriOS/Classess/Modules/HomePage/ViewControllers/SPHomeDetailViewController.m"
-            timestampString = "547053809.889325"
+            timestampString = "552057621.780277"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "313"
-            endingLineNumber = "313"
+            startingLineNumber = "343"
+            endingLineNumber = "343"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -132,11 +132,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SmartPurifieriOS/Classess/Modules/HomePage/ViewControllers/SPHomeDetailViewController.m"
-            timestampString = "547053809.889478"
+            timestampString = "552057621.780854"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
             landmarkName = "-changeCostype:"
             landmarkType = "7">
          </BreakpointContent>

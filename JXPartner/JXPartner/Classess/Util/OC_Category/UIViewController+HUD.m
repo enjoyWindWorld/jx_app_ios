@@ -23,6 +23,14 @@
 
     [SVProgressHUD showWithStatus:status];
 }
+
+- (void)showDefaultWithStatus:(NSString*)status{
+    
+    [UIViewController updateMaskTypeWithSV:SVProgressHUDMaskTypeClear];
+
+    [SVProgressHUD showWithStatus:status];
+}
+
 - (void)showProgress:(float)progress{
     
     [UIViewController updateMaskTypeWithSV:SVProgressHUDMaskTypeClear];
