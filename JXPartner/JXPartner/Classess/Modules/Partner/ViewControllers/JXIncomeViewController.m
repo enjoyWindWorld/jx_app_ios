@@ -40,6 +40,8 @@
 
 @property (nonatomic,copy) NSString * orderNO ;
 
+@property (nonatomic,assign) NSTimeInterval timeout ;
+
 @end
 
 @implementation JXIncomeViewController
@@ -113,7 +115,7 @@
 
     __weak  typeof(self)  weakself  = self ;
 
-     [self showWithStatus:@"请稍后..."];
+     [self showDefaultWithStatus:@"请稍后..."];
     
     [self.business fetchTiXianSalesAllMoney:@{} success:^(id result) {
         
@@ -132,13 +134,19 @@
            
             money  = [dic[myWithdrawalLimit] floatValue];
             weakself.myIncomeLimitlabel.text = [NSString stringWithFormat:@"￥%.2f元",money];
-             weakself.orderNO = money == 0 ? nil : dic[DRAWAL_ORDERNO_KEY];
+            
+            
+            weakself.orderNO = money == 0 ? nil : dic[DRAWAL_ORDERNO_KEY];
+            weakself.timeout =  [[NSDate date] timeIntervalSince1970] ;
             
         }else{
         
             weakself.orderNO = nil;
             
             weakself.incomeMoneyLabel.text = [NSString stringWithFormat:@"￥%.2f元",0.00];
+            weakself.my_balanceLabel.text = [NSString stringWithFormat:@"￥%.2f元",0.00];
+            weakself.myIncomeLimitlabel.text = [NSString stringWithFormat:@"￥%.2f元",0.00];
+
         }
 
     } failer:^(id error) {
@@ -193,7 +201,31 @@
         if (!_orderNO )
             return ;
         
-        [self performSegueWithIdentifier:@"JXNewIncomeTableViewController" sender:nil];
+        NSTimeInterval timenow = [[NSDate date] timeIntervalSince1970] ;
+        
+        NSTimeInterval time = timenow - self.timeout ;
+        
+        NSTimeInterval statictime = 10 ;
+        
+        if ( time > statictime) {
+            
+            [self performSegueWithIdentifier:@"JXNewIncomeTableViewController" sender:nil];
+
+        }else{
+            
+            NSTimeInterval aftertime = statictime - time + 1 ;
+            
+            [self showWithStatus:@"请稍后..."];
+            
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(aftertime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                
+                [UIViewController dismiss] ;
+                
+                [self performSegueWithIdentifier:@"JXNewIncomeTableViewController" sender:nil];
+
+            });
+            
+        }
     }
     
     if (indexPath.section== 1 && indexPath.row==1) {

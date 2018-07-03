@@ -26,7 +26,7 @@
 
 - (void)showDefaultWithStatus:(NSString*)status{
     
-    [UIViewController updateMaskTypeWithSV:SVProgressHUDMaskTypeClear];
+    [UIViewController updateMaskTypeWithSV:SVProgressHUDMaskTypeNone];
 
     [SVProgressHUD showWithStatus:status];
 }

@@ -92,7 +92,7 @@
                               @{ITEMTEXTKEY:@"订单管理",ITEMIMAGEKEY:@"ordermanager"},
                               @{ITEMTEXTKEY:@"我的收入",ITEMIMAGEKEY:@"mymoney"},
                               @{ITEMTEXTKEY:@"我的e家",ITEMIMAGEKEY:@"subparnter"},
-//                              @{ITEMTEXTKEY:@"售后管理",ITEMIMAGEKEY:@"subparnter"},
+                              @{ITEMTEXTKEY:@"售后管理",ITEMIMAGEKEY:@"subparnter"},
                               @{ITEMTEXTKEY:@"我的消息",ITEMIMAGEKEY:@"mymessage"},
                               @{ITEMTEXTKEY:@"设置",ITEMIMAGEKEY:@"setting"}];
     
@@ -213,12 +213,12 @@
         
         [weakself getPeopleInfoation];
         
-        if (DEBUG) {
-            
-            [GeTuiSdk bindAlias:[NSString stringWithFormat:@"test_%@",model.partnerNumber] andSequenceNum:model.partnerNumber];
-        }else{
+//        if (DEBUG) {
+//
+//            [GeTuiSdk bindAlias:[NSString stringWithFormat:@"test_%@",model.partnerNumber] andSequenceNum:model.partnerNumber];
+//        }else{
          [GeTuiSdk bindAlias:model.partnerNumber andSequenceNum:model.partnerNumber];
-        }
+//        } 
         if (model.originalpassword) {
             
             NSLog(@"当前为默认密码");
@@ -408,17 +408,17 @@
         
         [self.navigationController  pushViewController:vc animated:YES];
     }else if (indexPath.item == 3){
-        [self performSegueWithIdentifier:@"MyClarifierMessageViewController" sender:nil];
+//        [self performSegueWithIdentifier:@"MyClarifierMessageViewController" sender:nil];
 
-//        [self performSegueWithIdentifier:@"JXEvaluateTableViewController" sender:nil];
+        [self performSegueWithIdentifier:@"JXEvaluateTableViewController" sender:nil];
     }
     else if (indexPath.item == 4){
-     [self  performSegueWithIdentifier:@"JXPartnerSettingViewController" sender:nil];
-//        [self performSegueWithIdentifier:@"MyClarifierMessageViewController" sender:nil];
+//     [self  performSegueWithIdentifier:@"JXPartnerSettingViewController" sender:nil];
+        [self performSegueWithIdentifier:@"MyClarifierMessageViewController" sender:nil];
     
     }else if (indexPath.item == 5){
     
-//         [self  performSegueWithIdentifier:@"JXPartnerSettingViewController" sender:nil];
+         [self  performSegueWithIdentifier:@"JXPartnerSettingViewController" sender:nil];
     }
     
 }

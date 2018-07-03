@@ -147,12 +147,12 @@
         
         [model saveCurrentPartnerModel];
 
-        if (DEBUG) {
-            
-            [GeTuiSdk bindAlias:[NSString stringWithFormat:@"test_%@",model.partnerNumber] andSequenceNum:model.partnerNumber];
-        }else{
+//        if (DEBUG) {
+//
+//            [GeTuiSdk bindAlias:[NSString stringWithFormat:@"test_%@",model.partnerNumber] andSequenceNum:model.partnerNumber];
+//        }else{
             [GeTuiSdk bindAlias:model.partnerNumber andSequenceNum:model.partnerNumber];
-        }
+//        }
         [weakself showSuccessWithStatus:@"登录成功"];
         
         AppDelegate * dele = (AppDelegate*)[UIApplication sharedApplication].delegate ;

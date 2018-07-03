@@ -185,22 +185,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "JXPartner/Classess/Modules/Partner/ViewControllers/JXIncomeViewController.m"
-            timestampString = "551977433.8493741"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "191"
-            endingLineNumber = "191"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "JXPartner/Classess/Modules/Main/ViewController/RegTableViewCell.m"
             timestampString = "547578090.192327"
             startingColumnNumber = "9223372036854775807"
@@ -234,7 +218,7 @@
                   moduleName = "JXPartner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Wind/Documents/jx_app_ios/JXPartner/JXPartner/Classess/Modules/Partner/Business/JXPartnerBusiness.m"
-                  timestampString = "552259246.194731"
+                  timestampString = "552322087.267868"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "74"
@@ -249,7 +233,7 @@
                   moduleName = "JXPartner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Wind/Documents/jx_app_ios/JXPartner/JXPartner/Classess/Modules/Partner/Business/JXPartnerBusiness.m"
-                  timestampString = "552259246.199653"
+                  timestampString = "552322087.272095"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "76"
@@ -282,7 +266,7 @@
                   moduleName = "JXPartner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Wind/Documents/jx_app_ios/JXPartner/JXPartner/Classess/Util/Manager/NetWorkManager/SPBaseNetWorkRequst.m"
-                  timestampString = "552259246.206329"
+                  timestampString = "552322087.281425"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "330"
@@ -297,7 +281,7 @@
                   moduleName = "JXPartner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Wind/Documents/jx_app_ios/JXPartner/JXPartner/Classess/Util/Manager/NetWorkManager/SPBaseNetWorkRequst.m"
-                  timestampString = "552259246.2096601"
+                  timestampString = "552322087.285097"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "330"
@@ -314,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JXPartner/Classess/Modules/Partner/ViewControllers/JXNewIncomeTableViewController.m"
-            timestampString = "552260400.4067219"
+            timestampString = "552330823.234217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "335"
@@ -330,7 +314,7 @@
                   moduleName = "JXPartner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Wind/Documents/jx_app_ios/JXPartner/JXPartner/Classess/Modules/Partner/ViewControllers/JXNewIncomeTableViewController.m"
-                  timestampString = "552259246.216166"
+                  timestampString = "552322087.293299"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "335"
@@ -345,7 +329,7 @@
                   moduleName = "JXPartner"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Wind/Documents/jx_app_ios/JXPartner/JXPartner/Classess/Modules/Partner/ViewControllers/JXNewIncomeTableViewController.m"
-                  timestampString = "552259246.219147"
+                  timestampString = "552322087.296919"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "337"
@@ -362,12 +346,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JXPartner/Classess/Modules/Partner/ViewControllers/JXNewIncomeTableViewController.m"
-            timestampString = "552260400.406828"
+            timestampString = "552330823.234304"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "283"
             endingLineNumber = "283"
             landmarkName = "-requestAdultIncome"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JXPartner/Classess/Modules/Partner/ViewControllers/JXEvaluateTableViewController.m"
+            timestampString = "552330823.234376"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JXPartner/Classess/Modules/Partner/ViewControllers/JXEvaluateTableViewController.m"
+            timestampString = "552330823.2344429"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
