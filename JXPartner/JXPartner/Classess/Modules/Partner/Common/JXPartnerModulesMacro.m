@@ -94,6 +94,10 @@ NSString * const HomePageNewsList = @"smvc/news/information.v";
             
             string = @"运营商";
             break ;
+        case JXPartnerLevel_County:
+            
+            string = @"分公司";
+            break ;
         
         default:
             string = @"创客";
@@ -111,10 +115,7 @@ NSString * const HomePageNewsList = @"smvc/news/information.v";
         
         leve = JXPartnerLevel_County;
     }
-    if ([level isEqualToString:@"区级"]) {
-        
-        leve = JXPartnerLevel_Area;
-    }
+ 
     if ([level isEqualToString:@"市级"]) {
         
         leve = JXPartnerLevel_City;

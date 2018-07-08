@@ -22,11 +22,11 @@
 //服务器环境配置
 #if !defined SmartPurifierHostURL_For_Develop && !defined SmartPurifierHostURL_For_BetaTest && !defined SmartPurifierHostURL_For_Release
 
-#define SmartPurifierHostURL_For_Develop   //开发
+//#define SmartPurifierHostURL_For_Develop   //开发
 
 //#define SmartPurifierHostURL_For_BetaTest   //内测分发
 
-//#define SmartPurifierHostURL_For_Release    //线上 appleStorezvs
+#define SmartPurifierHostURL_For_Release    //线上 appleStorezvs
 
 #endif
 
@@ -37,6 +37,8 @@
 static NSString * const SmartPurifierHostURL  = @"http://www.szjxzn.tech";
 
 #define HOST_PORT @":7686"
+#define HOST_DIRURL @"jx_partner"
+
 
 #else
 
@@ -46,14 +48,15 @@ static NSString * const SmartPurifierHostURL  = @"http://www.szjxzn.tech";
 //static NSString * const SmartPurifierHostURL  = @"http://172.20.10.3:8080";
 static NSString * const SmartPurifierHostURL  = @"http://39.104.126.204";
 
-
 #define HOST_PORT @""
+#define HOST_DIRURL @""
 
 #elif defined SmartPurifierHostURL_For_BetaTest
 
 static NSString * const SmartPurifierHostURL = @"http://192.168.1.45";
 
 #define HOST_PORT @"8080"
+#define HOST_DIRURL @"jx_partner"
 
 
 #endif
@@ -61,8 +64,6 @@ static NSString * const SmartPurifierHostURL = @"http://192.168.1.45";
 //jx_smart
 //8080
 //jx_partner
-#define HOST_DIRURL @""
-
 
 #define JXCashRuleURL @"http://www.szjxzn.tech:8080/jx/pdf/cashrule.pdf"
 //注册协议

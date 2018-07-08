@@ -439,7 +439,7 @@
         
         _engine.responseSerializer = [AFJSONResponseSerializer serializer];
         //AFHTTPResponseSerializer
-        _engine.requestSerializer.timeoutInterval = 1000 ;
+        _engine.requestSerializer.timeoutInterval = 500 ;
         
         _engine.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",
                                                              @"text/html",

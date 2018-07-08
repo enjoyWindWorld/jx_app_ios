@@ -28,13 +28,15 @@ typedef NS_ENUM(NSInteger,JXPartnerLevel) {
     
     JXPartnerLeve_Partner = -3,
     //jx
-    JXPartnerLevel_Province = 1,
     
-    JXPartnerLevel_City = 2,
+    JXPartnerLevel_County = 0,    //分公司
     
-    JXPartnerLevel_Area = 3 ,
+    JXPartnerLevel_Province = 1,  //运营商
     
-    JXPartnerLevel_County = 4,
+    JXPartnerLevel_City = 2,      //e创
+    
+//    JXPartnerLevel_Area = 3 ,
+
     
 };
 
