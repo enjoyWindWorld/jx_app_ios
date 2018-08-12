@@ -48,8 +48,8 @@ static NSString * const SmartPurifierHostURL  = @"http://www.szjxzn.tech";
 //static NSString * const SmartPurifierHostURL  = @"http://172.20.10.3:8080";
 static NSString * const SmartPurifierHostURL  = @"http://39.104.126.204";
 
-#define HOST_PORT @""
-#define HOST_DIRURL @""
+#define HOST_PORT @":7686"
+#define HOST_DIRURL @"jx_partner"
 
 #elif defined SmartPurifierHostURL_For_BetaTest
 

@@ -92,7 +92,7 @@
                               @{ITEMTEXTKEY:@"订单管理",ITEMIMAGEKEY:@"ordermanager"},
                               @{ITEMTEXTKEY:@"我的收入",ITEMIMAGEKEY:@"mymoney"},
                               @{ITEMTEXTKEY:@"我的e家",ITEMIMAGEKEY:@"subparnter"},
-//                              @{ITEMTEXTKEY:@"售后管理",ITEMIMAGEKEY:@"subparnter"},
+                              @{ITEMTEXTKEY:@"售后管理",ITEMIMAGEKEY:@"subparnter"},
                               @{ITEMTEXTKEY:@"我的消息",ITEMIMAGEKEY:@"mymessage"},
                               @{ITEMTEXTKEY:@"设置",ITEMIMAGEKEY:@"setting"}];
     
@@ -212,6 +212,8 @@
         [model saveCurrentPartnerModel];
         
         [weakself getPeopleInfoation];
+        
+        
         
 //        if (DEBUG) {
 //
@@ -350,7 +352,7 @@
     
     cell.itemImage.image = [UIImage imageNamed:_collectionDataSource[indexPath.item][ITEMIMAGEKEY]];
     
-    if (indexPath.item == 3) {
+    if (indexPath.item == 4) {
         
         [cell.itemImage.badgeView setOutlineWidth:0.];
         
@@ -408,13 +410,13 @@
         
         [self.navigationController  pushViewController:vc animated:YES];
     }else if (indexPath.item == 3){
-        [self performSegueWithIdentifier:@"MyClarifierMessageViewController" sender:nil];
+//        [self performSegueWithIdentifier:@"MyClarifierMessageViewController" sender:nil];
 
-//        [self performSegueWithIdentifier:@"JXEvaluateTableViewController" sender:nil];
+        [self performSegueWithIdentifier:@"JXEvaluateTableViewController" sender:nil];
     }
     else if (indexPath.item == 4){
-     [self  performSegueWithIdentifier:@"JXPartnerSettingViewController" sender:nil];
-//        [self performSegueWithIdentifier:@"MyClarifierMessageViewController" sender:nil];
+//     [self  performSegueWithIdentifier:@"JXPartnerSettingViewController" sender:nil];
+        [self performSegueWithIdentifier:@"MyClarifierMessageViewController" sender:nil];
     
     }else if (indexPath.item == 5){
     

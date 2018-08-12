@@ -284,9 +284,9 @@
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    JXPlanFilterLifeModel * model = _datas[indexPath.section];
-
-    [self performSegueWithIdentifier:@"JXAfterSalesViewController" sender:model];
+//    JXPlanFilterLifeModel * model = _datas[indexPath.section];
+//
+//    [self performSegueWithIdentifier:@"JXAfterSalesViewController" sender:model];
 
 }
 

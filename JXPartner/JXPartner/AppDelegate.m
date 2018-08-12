@@ -26,7 +26,7 @@
 #import <UMSocialCore/UMSocialCore.h>
 
 
-static const CGFloat kDefaultPlaySoundInterval = 5.0;
+static const CGFloat kDefaultPlaySoundInterval = 5.0 * 60 ;
 
 @interface AppDelegate ()
 
@@ -441,6 +441,19 @@ static const CGFloat kDefaultPlaySoundInterval = 5.0;
 }
 
 -(void)addLocalNotification:(NSString*)notiContent{
+    
+    NSTimeInterval timeInterval = [[NSDate date]
+                                   timeIntervalSinceDate:self.lastPlaySoundDate];
+    
+    if (timeInterval < kDefaultPlaySoundInterval) {
+        //如果距离上次响铃和震动时间太短, 则跳过响铃
+        NSLog(@"skip ringing & vibration %@, %@", [NSDate date], self.lastPlaySoundDate);
+        return;
+    }
+    //保存最后一次响铃时间
+    self.lastPlaySoundDate = [NSDate date];
+    
+//    [JXMsgPlaySound initSystemShake];
 
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
         
@@ -474,18 +487,6 @@ static const CGFloat kDefaultPlaySoundInterval = 5.0;
         [[UIApplication sharedApplication] scheduleLocalNotification:local];
     }
 
-    NSTimeInterval timeInterval = [[NSDate date]
-                                   timeIntervalSinceDate:self.lastPlaySoundDate];
-
-    if (timeInterval < kDefaultPlaySoundInterval) {
-        //如果距离上次响铃和震动时间太短, 则跳过响铃
-        NSLog(@"skip ringing & vibration %@, %@", [NSDate date], self.lastPlaySoundDate);
-        return;
-    }
-    //保存最后一次响铃时间
-    self.lastPlaySoundDate = [NSDate date];
-
-    [JXMsgPlaySound initSystemShake];
 }
 
 /** SDK收到sendMessage消息回调 */
