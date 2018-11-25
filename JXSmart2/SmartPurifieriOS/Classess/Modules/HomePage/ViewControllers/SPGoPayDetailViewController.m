@@ -435,6 +435,8 @@
 
 -(NSString*)getpayPrice{
 
+
+    
     if ([SPUserModel getUserLoginModel]&&[[SPUserModel getUserLoginModel].userid isEqualToString:JX_TEST_USER_ID]) {
         
         [_confirmPayBtn setTitle:@"确认支付 :￥0" forState:UIControlStateNormal];

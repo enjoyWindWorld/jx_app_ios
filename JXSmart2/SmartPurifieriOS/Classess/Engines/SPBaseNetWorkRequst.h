@@ -16,6 +16,9 @@
  */
 @interface SPBaseNetWorkRequst : NSObject
 
+@property (nonatomic,copy) NSString * requestUrl ;
+
++(SPBaseNetWorkRequst *) shareRequst ;
 
 /**
  网络请求方法

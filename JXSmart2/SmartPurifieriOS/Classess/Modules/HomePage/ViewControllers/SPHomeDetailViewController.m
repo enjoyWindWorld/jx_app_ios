@@ -228,9 +228,13 @@ NSString * const itemNewSubContent = @"itemSubContent";
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
+    if (section == 0) {
     
-    return self.itemDataArr.count;
+        return self.itemDataArr.count;
+
+    }
     
+    return 4;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -266,7 +270,7 @@ NSString * const itemNewSubContent = @"itemSubContent";
     
     UIImageView * imageview = [cell.contentView viewWithTag:10001];\
     
-    NSString * imageName = [NSString stringWithFormat:@"detail_list-%ld.jpg",indexPath.row];
+    NSString * imageName = [NSString stringWithFormat:@"detailimage%ld.jpg",indexPath.row];
     
     imageview.image = [UIImage imageNamed:imageName];
     

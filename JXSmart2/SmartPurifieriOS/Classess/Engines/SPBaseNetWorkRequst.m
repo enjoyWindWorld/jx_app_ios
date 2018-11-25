@@ -397,7 +397,40 @@
 
     if (!_engine) {
         
-        _engine = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:SmartPurifierHostURL]];
+        NSString * url = SmartPurifierHostURL;
+        
+#ifdef SmartPurifierHostURL_For_Release
+        
+        url = SmartPurifierHostURL ;
+#else
+        
+#ifdef SmartPurifierHostURL_For_Develop
+        
+        NSUserDefaults * us = [NSUserDefaults standardUserDefaults];
+        
+        NSString * oriUrl = [us objectForKey:@"SmartPurifierHostURL"];
+        
+        if (oriUrl) {
+            url = oriUrl ;
+        }
+   
+        
+#elif defined SmartPurifierHostURL_For_BetaTest
+        
+        NSUserDefaults * us = [NSUserDefaults standardUserDefaults];
+        
+        NSString * oriUrl = [us objectForKey:@"SmartPurifierHostURL"];
+        
+        if (oriUrl) {
+            url = oriUrl ;
+        }
+        
+#endif
+#endif
+        
+        _requestUrl = url ;
+        
+        _engine = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:_requestUrl]];
         
 //        _engine.requestSerializer = [AFJSONRequestSerializer serializer];
         

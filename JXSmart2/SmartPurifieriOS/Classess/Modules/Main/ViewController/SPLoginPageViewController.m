@@ -36,6 +36,9 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *passwordText;
 
+
+@property (weak, nonatomic) IBOutlet UIImageView *logo;
+
 @end
 
 @implementation SPLoginPageViewController
@@ -66,9 +69,74 @@
     _registerButton.layer.borderColor = [UIColor colorWithHexString:@"1bb6ef"].CGColor ;
     
     [AppDelegate jx_privateMethod_FullScreenView];
+    
+    
+#ifdef SmartPurifierHostURL_For_Release
+    
+#else
+    
+    UITapGestureRecognizer * debugtap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(presentChangeURL)];
+    
+    debugtap.numberOfTapsRequired = 5 ;
+    
+    self.logo.userInteractionEnabled = YES;
+    
+    [self.logo addGestureRecognizer:debugtap];
+    
+ 
+#endif
+    
+    
 //    [self loadViewDataSource];
     // Do any additional setup after loading the view.
 }
+
+-(void)presentChangeURL{
+    
+    NSLog(@"tap");
+    
+    UIAlertController *alertController=[UIAlertController alertControllerWithTitle:@"请求地址更改"message:@""preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        
+        textField.placeholder = [SPBaseNetWorkRequst shareRequst].requestUrl ;
+        
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+        
+        
+    }];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定"style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        NSString * url  = alertController.textFields.firstObject.text ;
+        
+        if (url) {
+            
+            NSUserDefaults * st = [NSUserDefaults standardUserDefaults];
+            
+            [st setObject:url forKey:@"SmartPurifierHostURL"];
+            
+            [st synchronize];
+            
+            [SPSVProgressHUD showSuccessWithStatus:@"更新成功重新启动"];
+            
+
+        }
+
+    }];
+    
+    [alertController addAction:cancelAction];
+    
+    [alertController addAction:okAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+    
+}
+
 
 -(void)viewWillAppear:(BOOL)animated{
 
